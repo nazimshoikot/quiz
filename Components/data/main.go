@@ -20,7 +20,15 @@ type Question struct {
 }
 
 func main() {
-	data, err := ioutil.ReadFile("try.txt")
+
+	if len(os.Args) != 2 {
+		fmt.Println("Wrong format.\nUsage: go run main.go <filename> OR data <filename>")
+		return
+	}
+
+	filename := os.Args[1]
+
+	data, err := ioutil.ReadFile(filename)
 	if err != nil {
 		fmt.Println("Could not read file")
 		return
@@ -33,28 +41,24 @@ func main() {
 
 	// split the questions into an array
 	questionsArr := pattern.Split(str, -1)
-	fmt.Println("Length: ", len(questionsArr))
 
 	// write the json file
 	questionsArray := make([]Question, 0)
 	for _, question := range questionsArr {
-		fmt.Println("question: ", question)
+		// fmt.Println("question: ", question)
 		// split using new line
 		qArr := strings.Split(question, "\r\n")
-		fmt.Println("Array:")
-		for _, item := range qArr {
-			fmt.Print(item, ",")
-		}
-		fmt.Println()
+		// fmt.Println("Array:")
+		// for _, item := range qArr {
+		// 	fmt.Print(item, ",")
+		// }
+		// fmt.Println()
 
 		ques := qArr[0]
 		A := qArr[1][2:]
 		B := qArr[2][2:]
 		C := qArr[3][2:]
 		D := qArr[4][2:]
-
-		fmt.Println("A: ", A)
-		fmt.Println("D: ", D)
 
 		var q Question
 		q = Question{ques, A, B, C, D, ""} // add answer later
@@ -69,7 +73,9 @@ func main() {
 
 	// write the questions array into json file
 	// create a file and defer close it
-	f, err := os.Create("try.json")
+	outfile := strings.Split(filename, ".")[0] + ".json"
+
+	f, err := os.Create(outfile)
 	if err != nil {
 		panic(err)
 	}
