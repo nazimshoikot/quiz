@@ -4,9 +4,9 @@ quiz repo to work in a team
 The app will allow students to practice mcq questions and get feedback on which areas to improve on. 
 
 
-### Pages to be displayed (in progress) ###
-# Welcome Page
-# Login Page (will both be the same?)
+## Pages to be displayed (in progress) ##
+#### Welcome Page
+#### Login Page (will both be the same?)
 # Dashboard (when logged in)
 # Profile page
 # Choose qualification
