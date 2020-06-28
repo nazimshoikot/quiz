@@ -1,0 +1,248 @@
+###
+2018
+
+Which statements about book-keeping and accounting are correct?
+Accounting is performed periodically rather than daily.
+Accounting relies on having accurate book-keeping records.
+Book-keeping includes the preparation of financial statements.
+Book-keeping involves the recording of financial transac
+A   1, 2 and 4
+B   1 and 3
+C  2, 3 and 4
+D   2 and 4
+A
+
+A trader invested $4000 into the business. $2000 was used to pay a credit supplier. The rest of the money was paid into the business bank account.
+What changes would take place within the accounting equation?
+A   assets owner’s equity (capital) liabilities –$2000 –$4000 +$2000
+B   assets owner’s equity (capital) liabilities +$2000 +$2000 no effect
+C  assets owner’s equity (capital) liabilities +$2000 +$4000 –$2000
+D   assets owner’s equity (capital) liabilities +$4000 +$4000 no effect
+C
+
+Wilma bought 55 items from Margot at a list price of $40 each, subject to a 15% trade discount. Wilma later returned 25 items as they were faulty.
+Which document did Margot issue to Wilma for the returned items?
+A   credit note for $850
+B   credit note for $1000
+C  debit note for $850
+D   debit note for $1000
+A
+
+The bank agreed to allow Dan an overdraft with a limit of $500.
+What did this mean?
+A   A sum of $500 would be transferred into Dan’s account by the bank.
+B   All cheques issued by Dan would be paid by the bank.
+C  Cheques issued by Dan would be paid by the bank provided the account was not overdrawn by more than $500.
+D   Only cheques issued by Dan for less than $500 would be paid by the bank if there was not enough money in the account.
+C
+
+On 30 September 2018, Ahmed’s bank statement showed a credit balance of $2500. Ahmed found that a cheque issued for $90 and a deposit of $500 had not been included on the bank statement.
+What was the balance at bank shown in Ahmed’s cash book on 30 September 2018?
+A   $1910
+B   $2090
+C  $2910
+D   $3090
+C
+
+Which statement about a debit balance brought down on a ledger account is not correct?
+A   It may represent a loss.
+B   It may represent a prepaid expense
+C  It may represent an accrued expense.
+D   It may represent an asset.
+C
+
+On 1 September 2018 Chan owed Tan $570. During September 2018 the following transactions took place.
+Tan sold goods, $380, on credit to Chan Chan returned goods, $150, to Tan Chan paid Tan $500 by cheque
+What was the balance brought down on Chan’s account in Tan’s ledger on 1 October 2018?
+A   $300 credit
+B   $300 debit
+C  $840 credit
+D   $840 debit
+B
+
+Which name is given to a statement of ledger balances on a particular date?
+A   bank reconciliation statement
+B   general ledger
+C  statement of financial position
+D   trial balance
+D
+
+The balance of which account will appear in the debit column of a trial balance?
+A   carriage inwards
+B   discounts received
+C  provision for doubtful debts
+D   purchases returns
+A
+
+Ella rents business premises. She owed rent at both the start and the end of the financial year. How can rent payable for the year be calculated?
+A   rent paid – amount owing at start of year
+B   rent paid – amount owing at start of year + amount owing at end of year
+C  rent paid + amount owing at end of year
+D   rent paid + amount owing at start of year – amount owing at end of year
+B
+
+Bashir maintains a provision for doubtful debts of 3% of the trade receivables at the end of the year.
+On 31 August 2017 trade receivables amounted to $70 000. On 31 August 2018 trade receivables amounted to $73 000.
+Which double entry should Bashir make on 31 August 2018?
+A   debit $ credit $ income statement 90 provision for doubtful debts account 90
+B   debit $ credit $ income statement 2100 provision for doubtful debts account 2100
+C  debit $ credit $ provision for doubtful debts account 90 income statement 90
+D   debit $ credit $ provision for doubtful debts account 2100 income statement 2100
+A
+
+Leroy has an engineering business. On 31 May he received an invoice from AB Machines showing the following:
+cost of replacement parts for machine cost of repairs to machine
+cost of machine
+cost of installation of machine Which costs are capital expenditure in Leroy’s books?
+A   machine, installation
+B   machine only
+C  replacement parts, machine
+D   replacement parts, repairs, installation
+A
+
+Why is depreciation charged on a non-current asset?
+A   to accumulate a fund of money to replace the asset
+B   to charge the cost of using the asset against income
+C  to determine the market value of the asset
+D   to ensure that profits are not understated
+B
+
+Chris purchased a machine costing $15 000 on 1 January 2016. He depreciates the machine using the diminishing (reducing) balance method at 20% per annum.
+Which journal entry did Chris make on 31 December 2017?
+A   debit $ credit $ income statement 2400 provision for depreciation of machinery 2400
+B   debit $ credit $ income statement 3000 provision for depreciation of machinery 3000
+C  debit $ credit $ provision for depreciation of machinery 2400 income statement 2400
+D   debit $ credit $ provision for depreciation of machinery 3000 income statement 3000
+A
+
+Hossam took out a 5-year bank loan on 1 January 2018. All of the money borrowed was used to purchase a delivery van.
+Under which heading will these items be shown in Hossam’s statement of financial position on  31 March 2018?
+A   bank loan delivery van current liability current asset
+B   bank loan delivery van current liability non-current asset
+C  bank loan delivery van non-current liability current asset
+D   bank loan delivery van non-current liability non-current asset
+D
+
+Beth provided the following information at 31 December 2017.
+capital 1 January 2017	26 000
+profit for the year	3 600
+drawings	2 500
+long-term loan	8 000
+Beth paid a personal cheque to the business on 30 December 2017 amounting to $5000. What was the capital employed on 31 December 2017?
+A   $24 100
+B   $32 100
+C  $35 100
+D   $40 100
+D
+
+Which businesses do not prepare a trading account section of an income statement?
+furniture store,
+gym,
+newsagent,
+toy shop,
+window-cleaner.
+A   1 and 2
+B   2 and 5
+C  3 and 4
+D   3 and 5
+B
+
+X and Y are sole traders. They decided to form a partnership.
+Which group contains only disadvantages of forming a partnership?
+A   disagreements may occur between the partners, profits are shared
+B   disagreements may occur between the partners, risks are shared
+C  losses are shared, responsibilities are shared
+D   profits are shared, risks are shared
+A
+
+Which may be included in an income and expenditure account?
+A   bad debts
+B   opening balance on the bank account
+C  purchase of equipment
+D   subscriptions received for the following financial year
+A
+
+At the end of the financial year a sports club owed rent for the clubhouse. Some members had paid their subscriptions in advance for the following year.
+How would these items be recorded in the club’s statement of financial position?
+A   rent owing subscriptions paid in advance current asset current asset
+B   rent owing subscriptions paid in advance current asset current liability
+C  rent owing subscriptions paid in advance current liability current asset
+D   rent owing subscriptions paid in advance current liability current liability
+D
+
+A business provided the following information.
+opening inventory	$8000,
+closing inventory	$10 000,
+rate of turnover of inventory	12 times,
+mark-up	50%,
+What was the revenue?
+A   $54 000
+B   $108 000
+C  $162 000
+D   $180 000
+C
+
+Which group contains only indirect costs?
+A   carriage inwards, factory rent, wages of factory supervisors
+B   carriage inwards, raw materials, wages of machine operators
+C  depreciation of machinery, factory rent, wages of factory supervisors
+D   depreciation of machinery, raw materials, wages of machine operators
+C
+
+A manufacturing business provided the following information.
+prime cost	250 000,
+factory overhead expenses	50 000,
+office and selling expenses	25 000,
+work-in-progress at 1 January	1 500,
+work-in-progress at 31 December	2 500,
+What was the production cost of goods completed?
+A   $249 000
+B   $299 000
+C  $301 000
+D   $324 000
+B
+
+Which items are statutory deductions from an employee’s gross pay?
+A   donation to charity and club subscription
+B   donation to charity and social security contribution
+C  income tax and club subscription
+D   income tax and social security contribution
+D
+
+Karim works 40 hours a week at a rate of $5 per hour and any overtime is paid at time and a half. He is paid monthly in arrears.
+He worked 12 hours, 16 hours and 18 hours overtime in May, June and July respectively. How much was Karim paid in June? (Assume 4 weeks in a month)
+A   $800
+B   $890
+C  $920
+D   $935
+B
+
+What is included in the working capital ratio (current ratio), but not the quick ratio (acid test  ratio)?
+A   cash
+B   inventory
+C  other receivables
+D   trade payables
+B
+
+Kim has been in business for many years and expects this will continue.
+She provided the following information.
+premises	
+at cost	50 000,
+at market value	65 000,
+trade receivables	
+at book value	14 000,
+Trade receivables included a debt of $2000 which was unlikely to be paid.
+At which total value were these assets recorded in Kim’s statement of financial position?
+A   $62 000
+B   $64 000
+C  $77 000
+D   $79 000
+A
+
+What is the purpose of international accounting standards?
+A   to allow users to rely on the information in financial statements being error-free
+B   to enable accountants to get work easily anywhere in the world
+C  to enable non-accountants to understand all the information in financial statements
+D   to make it easier to compare financial statements prepared in different countries
+D
+

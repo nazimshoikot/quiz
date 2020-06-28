@@ -18,6 +18,8 @@ type Question struct {
 	D        string
 	Answer   string
 	Category string
+	Guess    string
+	ShowBody bool
 }
 
 type YearWise struct {
@@ -25,15 +27,7 @@ type YearWise struct {
 	Questions []Question
 }
 
-func main() {
-
-	if len(os.Args) != 2 {
-		fmt.Println("Wrong format.\nUsage: go run main.go <filename> OR data <filename>")
-		return
-	}
-
-	filename := os.Args[1]
-
+func convertToJSON(filename string) {
 	data, err := ioutil.ReadFile(filename)
 	if err != nil {
 		fmt.Println("Could not read file")
@@ -56,7 +50,7 @@ func main() {
 		// split the questions into an array
 		questionsArr := pattern.Split(str, -1)
 		questionsArr = questionsArr[:len(questionsArr)-1]
-		fmt.Println("Length: ", len(questionsArr))
+		// fmt.Println("Length: ", len(questionsArr))
 		year := strings.Trim(questionsArr[0], "\r\n")
 		questionsArr = questionsArr[1:]
 		// fmt.Println("Year: ", year)
@@ -70,8 +64,8 @@ func main() {
 			// split using new line
 			qArr := strings.Split(question, "\r\n")
 			if len(qArr) != 7 {
-				fmt.Println("Length of this arr: ", len(qArr))
-				fmt.Println("Array:")
+				fmt.Println("Number of fields in this question (should be 7): ", len(qArr))
+				fmt.Println("Fields (separated by ','):")
 				for _, item := range qArr {
 					fmt.Print(item, ",")
 				}
@@ -80,19 +74,19 @@ func main() {
 
 			// populate the fields
 			ques := qArr[0]
-			A := qArr[1][2:]
-			B := qArr[2][2:]
-			C := qArr[3][2:]
-			D := qArr[4][2:]
+			A := strings.Trim(qArr[1][2:], " ")
+			B := strings.Trim(qArr[2][2:], " ")
+			C := strings.Trim(qArr[3][2:], " ")
+			D := strings.Trim(qArr[4][2:], " ")
 			// fmt.Println("String raw ", qArr[5])
-			Answer := strings.Split(qArr[5], ":")[1]
+			Answer := strings.Trim(strings.Split(qArr[5], ":")[1], " ")
 			// fmt.Println("Ans - ", Answer)
 			// find category
 			catIndex := strings.Index(qArr[6], ":")
-			categ := qArr[6][catIndex+1:]
+			categ := strings.Trim(qArr[6][catIndex+1:], " ")
 
 			var q Question
-			q = Question{ques, A, B, C, D, Answer, categ} // add answer later
+			q = Question{ques, A, B, C, D, Answer, categ, "", false} // add answer later
 			questionsArray = append(questionsArray, q)
 
 			// fmt.Printf("%+v\n", q)
@@ -122,8 +116,6 @@ func main() {
 	// declare a buffered writer and write through the writer
 	w := bufio.NewWriter(f)
 
-	// for _, item := range storedArray {
-
 	qJSON, err := json.Marshal(storedArray)
 	if err != nil {
 		fmt.Println("Error while marshaling json")
@@ -132,8 +124,114 @@ func main() {
 	msg := string(qJSON)
 	w.WriteString(msg)
 
-	// }
-
 	// write the string
 	w.Flush()
+}
+
+func formatTextFile(filename string) {
+	data, err := ioutil.ReadFile(filename)
+	if err != nil {
+		fmt.Println("Could not read file")
+		return
+	}
+	// separate by year
+	yearArr := strings.Split(string(data), "###")
+	yearArr = yearArr[1:]
+
+	outFile := strings.Split(filename, ".")[0] + "-format.txt"
+
+	fullString := ""
+
+	for _, item := range yearArr {
+		str := item
+
+		// find the two newlines and split into array of questions
+		pattern := regexp.MustCompile(`(\r?\n){2}`)
+		// fmt.Println(pattern.FindAllIndex([]byte(str), -1))
+
+		// split the questions into an array
+		questionsArr := pattern.Split(str, -1)
+		questionsArr = questionsArr[:len(questionsArr)-1]
+		// fmt.Println("Length: ", len(questionsArr))
+		year := strings.Trim(questionsArr[0], "\r\n")
+		questionsArr = questionsArr[1:]
+		cnt := 0
+		// string to write in new file
+		fullString += "###\n" + string(year) + "\r\n\r\n"
+
+		fmt.Println("Number of questions detected: ", len(questionsArr))
+
+		for _, question := range questionsArr {
+			// fmt.Println("question: ", question)
+			// split using new line
+			qArr := strings.Split(question, "\r\n")
+			i := 0
+			for {
+				if strings.HasPrefix(qArr[i+1], "A ") {
+					break
+				}
+				qArr[i] = qArr[i] + " " + qArr[i+1]
+				qArr = append(qArr[:i+1], qArr[i+2:]...)
+			}
+
+			if len(qArr) != 6 {
+				fmt.Println("Number of fields in this question (should be 6): ", len(qArr))
+				fmt.Println("Fields (separated by ','):")
+				for _, item := range qArr {
+					fmt.Print(item, ",")
+				}
+				fmt.Println()
+			} else {
+				// add the two fields
+				cnt++
+				ans := "Answer: " + strings.Trim(qArr[5], " ")
+				qArr = qArr[:5]
+				qArr = append(qArr, ans)
+				qArr = append(qArr, "Category: ")
+			}
+
+			for _, j := range qArr {
+				fullString += j + "\r\n"
+			}
+			fullString += "\r\n"
+		}
+		fmt.Println("Number with total 8 fields fields: ", cnt)
+
+		// write the file
+		f, err := os.Create(outFile)
+		if err != nil {
+			fmt.Println(err.Error())
+			return
+		}
+		w := bufio.NewWriter(f)
+		_, err = w.WriteString(fullString)
+		if err != nil {
+			fmt.Println("could not write")
+			return
+		}
+
+		w.Flush()
+	}
+}
+
+func main() {
+
+	if len(os.Args) < 2 || len(os.Args) > 3 {
+		fmt.Println("Wrong format.\nUsage: go run main.go <filename> OR data <filename>")
+		fmt.Println("Use the -format flag to format the text file. Example: data <filename> -format")
+		return
+	}
+
+	if len(os.Args) == 3 {
+		if os.Args[2] == "-format" {
+			formatTextFile(os.Args[1])
+		} else {
+			fmt.Println("Wrong format.\nUsage: go run main.go <filename> OR data <filename>")
+			fmt.Println("Use the -format flag to format the text file. Example: data <filename> -format")
+
+		}
+	} else {
+		convertToJSON(os.Args[1])
+	}
+
 }
