@@ -1,54 +1,28 @@
 ###
 2018
 
-Which statements about book-keeping and accounting are correct?
-Accounting is performed periodically rather than daily.
-Accounting relies on having accurate book-keeping records.
-Book-keeping includes the preparation of financial statements.
-Book-keeping involves the recording of financial transac
-A   1, 2 and 4
-B   1 and 3
-C  2, 3 and 4
-D   2 and 4
-A
-
-A trader invested $4000 into the business. $2000 was used to pay a credit supplier. The rest of the money was paid into the business bank account.
-What changes would take place within the accounting equation?
-A   assets owner’s equity (capital) liabilities –$2000 –$4000 +$2000
-B   assets owner’s equity (capital) liabilities +$2000 +$2000 no effect
-C  assets owner’s equity (capital) liabilities +$2000 +$4000 –$2000
-D   assets owner’s equity (capital) liabilities +$4000 +$4000 no effect
+Ava had $4000 in the bank. She paid a supplier $575 by cheque in full settlement of $600 owing.
+Which changes would take place within the accounting equation?
+A   assets owner’s equity (capital) liabilities –$600 –$25 –$625
+B   assets owner’s equity (capital) liabilities –$600 +$25 –$625
+C   assets owner’s equity (capital) liabilities –$575 +$25 –$600
+D   assets owner’s equity (capital) liabilities +$575 –$25 +$600
 C
 
-Wilma bought 55 items from Margot at a list price of $40 each, subject to a 15% trade discount. Wilma later returned 25 items as they were faulty.
-Which document did Margot issue to Wilma for the returned items?
-A   credit note for $850
-B   credit note for $1000
-C  debit note for $850
-D   debit note for $1000
-A
-
-The bank agreed to allow Dan an overdraft with a limit of $500.
-What did this mean?
-A   A sum of $500 would be transferred into Dan’s account by the bank.
-B   All cheques issued by Dan would be paid by the bank.
-C  Cheques issued by Dan would be paid by the bank provided the account was not overdrawn by more than $500.
-D   Only cheques issued by Dan for less than $500 would be paid by the bank if there was not enough money in the account.
+Winston returned goods to Hanif.
+Which entries will Winston make in his ledgers?
+A   debit entry credit entry ledger account ledger account general Hanif purchases purchases returns
+B   debit entry credit entry ledger account ledger account general purchases returns purchases Hanif
+C   debit entry credit entry ledger account ledger account purchases Hanif general purchases returns
+D   debit entry credit entry ledger account ledger account purchases purchases returns general Hanif
 C
 
 On 30 September 2018, Ahmed’s bank statement showed a credit balance of $2500. Ahmed found that a cheque issued for $90 and a deposit of $500 had not been included on the bank statement.
 What was the balance at bank shown in Ahmed’s cash book on 30 September 2018?
 A   $1910
 B   $2090
-C  $2910
+C   $2910
 D   $3090
-C
-
-Which statement about a debit balance brought down on a ledger account is not correct?
-A   It may represent a loss.
-B   It may represent a prepaid expense
-C  It may represent an accrued expense.
-D   It may represent an asset.
 C
 
 On 1 September 2018 Chan owed Tan $570. During September 2018 the following transactions took place.
@@ -56,37 +30,25 @@ Tan sold goods, $380, on credit to Chan Chan returned goods, $150, to Tan Chan p
 What was the balance brought down on Chan’s account in Tan’s ledger on 1 October 2018?
 A   $300 credit
 B   $300 debit
-C  $840 credit
+C   $840 credit
 D   $840 debit
 B
 
-Which name is given to a statement of ledger balances on a particular date?
-A   bank reconciliation statement
-B   general ledger
-C  statement of financial position
-D   trial balance
-D
-
-The balance of which account will appear in the debit column of a trial balance?
-A   carriage inwards
-B   discounts received
-C  provision for doubtful debts
-D   purchases returns
+Seema’s financial year ends on 30 September. She rents premises at a monthly rent of $2000.
+During the year ended 30 September 2018 she paid $26 000 rent.
+Which journal entry will Seema make on 30 September 2018 to transfer the rent to the income statement?
+A   debit $ credit $ income statement 24 000 rent 24000
+B   debit $ credit $ income statement 26 000 rent 26 000
+C   debit $ credit $ rent 24 000 income statement 24 000
+D   debit $ credit $ rent 26 000 income statement 26 000
 A
-
-Ella rents business premises. She owed rent at both the start and the end of the financial year. How can rent payable for the year be calculated?
-A   rent paid – amount owing at start of year
-B   rent paid – amount owing at start of year + amount owing at end of year
-C  rent paid + amount owing at end of year
-D   rent paid + amount owing at start of year – amount owing at end of year
-B
 
 Bashir maintains a provision for doubtful debts of 3% of the trade receivables at the end of the year.
 On 31 August 2017 trade receivables amounted to $70 000. On 31 August 2018 trade receivables amounted to $73 000.
 Which double entry should Bashir make on 31 August 2018?
 A   debit $ credit $ income statement 90 provision for doubtful debts account 90
 B   debit $ credit $ income statement 2100 provision for doubtful debts account 2100
-C  debit $ credit $ provision for doubtful debts account 90 income statement 90
+C   debit $ credit $ provision for doubtful debts account 90 income statement 90
 D   debit $ credit $ provision for doubtful debts account 2100 income statement 2100
 A
 
@@ -96,153 +58,175 @@ cost of machine
 cost of installation of machine Which costs are capital expenditure in Leroy’s books?
 A   machine, installation
 B   machine only
-C  replacement parts, machine
+C   replacement parts, machine
 D   replacement parts, repairs, installation
 A
 
 Why is depreciation charged on a non-current asset?
 A   to accumulate a fund of money to replace the asset
 B   to charge the cost of using the asset against income
-C  to determine the market value of the asset
+C   to determine the market value of the asset
 D   to ensure that profits are not understated
 B
 
-Chris purchased a machine costing $15 000 on 1 January 2016. He depreciates the machine using the diminishing (reducing) balance method at 20% per annum.
-Which journal entry did Chris make on 31 December 2017?
-A   debit $ credit $ income statement 2400 provision for depreciation of machinery 2400
-B   debit $ credit $ income statement 3000 provision for depreciation of machinery 3000
-C  debit $ credit $ provision for depreciation of machinery 2400 income statement 2400
-D   debit $ credit $ provision for depreciation of machinery 3000 income statement 3000
-A
-
-Hossam took out a 5-year bank loan on 1 January 2018. All of the money borrowed was used to purchase a delivery van.
-Under which heading will these items be shown in Hossam’s statement of financial position on  31 March 2018?
-A   bank loan delivery van current liability current asset
-B   bank loan delivery van current liability non-current asset
-C  bank loan delivery van non-current liability current asset
-D   bank loan delivery van non-current liability non-current asset
-D
-
-Beth provided the following information at 31 December 2017.
-capital 1 January 2017	26 000
-profit for the year	3 600
-drawings	2 500
-long-term loan	8 000
-Beth paid a personal cheque to the business on 30 December 2017 amounting to $5000. What was the capital employed on 31 December 2017?
-A   $24 100
-B   $32 100
-C  $35 100
-D   $40 100
-D
-
-Which businesses do not prepare a trading account section of an income statement?
-furniture store,
-gym,
-newsagent,
-toy shop,
-window-cleaner.
-A   1 and 2
-B   2 and 5
-C  3 and 4
-D   3 and 5
+Sally bought a non-current asset. It was to be used for 10 years, after which it would have no scrap value. Sally used the straight-line method of depreciation.
+Which statements are correct?
+A   accumulated depreciation after five years annual depreciation charge equalled half of cost decreased each year
+B   accumulated depreciation after five years annual depreciation charge equalled half of cost was constant
+C   accumulated depreciation after five years annual depreciation charge was more than half of cost decreased each year
+D   accumulated depreciation after five years annual depreciation charge was more than half of cost was constant
 B
 
-X and Y are sole traders. They decided to form a partnership.
-Which group contains only disadvantages of forming a partnership?
-A   disagreements may occur between the partners, profits are shared
-B   disagreements may occur between the partners, risks are shared
-C  losses are shared, responsibilities are shared
-D   profits are shared, risks are shared
-A
+A draft income statement showed a gross profit of $12 200.
+It was later found that carriage on purchases, $260, and carriage on sales, $230, had both been included as expenses in the profit and loss section of the income statement.
+What was the corrected gross profit?
+A   $11 710
+B   $11 940
+C   $12 460
+D   $12 690
+B
+
+Raj is both a customer of and a supplier to Balbir.
+Raj’s account in Balbir’s sales ledger showed a debit balance of $300. There was a credit balance of $100 on Raj’s account in the purchases ledger. A contra entry between the two accounts was agreed.
+Which entry would Balbir make in Raj’s account in the purchases ledger?
+A   credit $100
+B   credit $200
+C   debit $100
+D   debit $200
+C
+
+Michael’s financial year ends on 31 August.
+On 30 August 2018 he purchased a motor  vehicle using a bank loan which is repayable on       30 August 2020.
+On 31 August 2018 Michael had a bank overdraft.
+In which sections of Michael’s statement of financial position on 31 August 2018 did these items appear?
+A   motor vehicle bank loan bank overdraft current asset current liability non-current liability
+B   motor vehicle bank loan bank overdraft current asset non-current liability current liability
+C   motor vehicle bank loan bank overdraft non-current asset current liability non-current liability
+D   motor vehicle bank loan bank overdraft non-current asset non-current liability current liability
+D
 
 Which may be included in an income and expenditure account?
 A   bad debts
 B   opening balance on the bank account
-C  purchase of equipment
+C   purchase of equipment
 D   subscriptions received for the following financial year
 A
 
-At the end of the financial year a sports club owed rent for the clubhouse. Some members had paid their subscriptions in advance for the following year.
-How would these items be recorded in the club’s statement of financial position?
-A   rent owing subscriptions paid in advance current asset current asset
-B   rent owing subscriptions paid in advance current asset current liability
-C  rent owing subscriptions paid in advance current liability current asset
-D   rent owing subscriptions paid in advance current liability current liability
+A club’s financial year ends on 31 July. During the year ended 31 July 2018 the following subscriptions were received.
+subscriptions for the year ended 31 July 2017 50,
+subscriptions for the year ended 31 July 2018 3400,
+subscriptions for the year ending 31 July 2019 20,
+How much would  be  included  in  the  receipts  and  payments  account  for  the  year  ended  31 July 2018?
+A   $3400
+B   $3420
+C   $3450
+D   $3470
 D
 
-A business provided the following information.
-opening inventory	$8000,
-closing inventory	$10 000,
-rate of turnover of inventory	12 times,
-mark-up	50%,
-What was the revenue?
-A   $54 000
-B   $108 000
-C  $162 000
-D   $180 000
+A trader does not keep full accounting records.
+How can credit purchases for his first year of trading be calculated?
+A   cheques paid + discounts received + amount owing to suppliers at year end
+B   cheques paid + discounts received – amount owing to suppliers at year end
+C   cheques paid – discounts received + amount owing to suppliers at year end
+D   cheques paid – discounts received – amount owing to suppliers at year end
+A
+
+A trader provided the following information.
+revenue	100 000,
+cost of sales	60 000,
+gross profit	40 000,
+profit for the year	20 000.
+What was the mark-up?
+A   20%
+B   33.33%
+C   40%
+D   66.67%
+D
+
+Which statements about ordinary shares are correct?
+1 If a company is wound up ordinary shares are repaid after debentures,
+2 Ordinary shares are a non-current liability of the company,
+3 The holders of ordinary shares are the owners of the company.
+A   1 and 3
+B   1 only
+C   2 and 3
+D   3 only
+A
+
+Which items are included in the equity section of the statement of financial position of a limited company?
+A   ordinary shares, retained earnings, debentures and current liabilities
+B   ordinary shares, retained earnings and debentures only
+C   ordinary shares and retained earnings only
+D   ordinary shares only
 C
+
+During the financial year, a manufacturing company’s payments included the following. purchase of a new machine
+running costs of the machine
+Where would these appear in the financial statements prepared at the end of the financial year?
+A   machine running costs of machine manufacturing account income statement
+B   machine running costs of machine manufacturing account manufacturing account
+C   machine running costs of machine statement of financial position income statement
+D   machine running costs of machine statement of financial position manufacturing account
+D
 
 Which group contains only indirect costs?
 A   carriage inwards, factory rent, wages of factory supervisors
 B   carriage inwards, raw materials, wages of machine operators
-C  depreciation of machinery, factory rent, wages of factory supervisors
+C   depreciation of machinery, factory rent, wages of factory supervisors
 D   depreciation of machinery, raw materials, wages of machine operators
 C
 
-A manufacturing business provided the following information.
-prime cost	250 000,
-factory overhead expenses	50 000,
-office and selling expenses	25 000,
-work-in-progress at 1 January	1 500,
-work-in-progress at 31 December	2 500,
-What was the production cost of goods completed?
-A   $249 000
-B   $299 000
-C  $301 000
-D   $324 000
-B
+A factory employee records his time of arrival and departure each day. Which document is used for recording his hours of work?
+A   clock card
+B   payroll register
+C   time sheet
+D   wages sheet
+A
 
 Which items are statutory deductions from an employee’s gross pay?
 A   donation to charity and club subscription
 B   donation to charity and social security contribution
-C  income tax and club subscription
+C   income tax and club subscription
 D   income tax and social security contribution
 D
 
-Karim works 40 hours a week at a rate of $5 per hour and any overtime is paid at time and a half. He is paid monthly in arrears.
-He worked 12 hours, 16 hours and 18 hours overtime in May, June and July respectively. How much was Karim paid in June? (Assume 4 weeks in a month)
-A   $800
-B   $890
-C  $920
-D   $935
+A trader provided the following information.
+revenue	95 000,
+purchases	40 000,
+opening inventory	20 000,
+closing inventory	18 000,
+cost of sales	42 000,
+What was the rate of turnover of inventory?
+A   2.10 times
+B   2.21 times
+C   5 times
+D   5.28 times
 B
 
-What is included in the working capital ratio (current ratio), but not the quick ratio (acid test  ratio)?
-A   cash
-B   inventory
-C  other receivables
-D   trade payables
-B
+A business provided the following information about its percentage of gross profit to sales.
+Year 1	40%, 
+Year 2	38%,
+Year 3	35%,
+What could explain the changes in the percentage of gross profit to sales?
+A   Cost of sales is decreasing.
+B   Expenses are decreasing.
+C   Quantity of goods sold is decreasing.
+D   Selling price is decreasing.
+D
 
-Kim has been in business for many years and expects this will continue.
-She provided the following information.
-premises	
-at cost	50 000,
-at market value	65 000,
-trade receivables	
-at book value	14 000,
-Trade receivables included a debt of $2000 which was unlikely to be paid.
-At which total value were these assets recorded in Kim’s statement of financial position?
-A   $62 000
-B   $64 000
-C  $77 000
-D   $79 000
-A
+A business values its inventory at the lower of cost and net realisable value.
+Which accounting principle is being applied?
+A   accounting entity
+B   dual aspect
+C   money measurement
+D   prudence
+D
 
 What is the purpose of international accounting standards?
 A   to allow users to rely on the information in financial statements being error-free
 B   to enable accountants to get work easily anywhere in the world
-C  to enable non-accountants to understand all the information in financial statements
+C   to enable non-accountants to understand all the information in financial statements
 D   to make it easier to compare financial statements prepared in different countries
 D
+
 

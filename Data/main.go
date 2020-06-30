@@ -19,7 +19,6 @@ type Question struct {
 	Answer   string
 	Category string
 	Guess    string
-	ShowBody bool
 }
 
 type YearWise struct {
@@ -86,7 +85,7 @@ func convertToJSON(filename string) {
 			categ := strings.Trim(qArr[6][catIndex+1:], " ")
 
 			var q Question
-			q = Question{ques, A, B, C, D, Answer, categ, "", false} // add answer later
+			q = Question{ques, A, B, C, D, Answer, categ, ""} // add answer later
 			questionsArray = append(questionsArray, q)
 
 			// fmt.Printf("%+v\n", q)
