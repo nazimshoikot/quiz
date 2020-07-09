@@ -8,11 +8,11 @@ import Home from './Components/Home.js';
 import Practice from './Components/Practice.js';
 import Mixed from './Components/Mixed.js';
 import Category from './Components/Category.js';
-import BoxScreen from './Components/new.js';
 
 const Stack = createStackNavigator();
 
 const App = () => {
+  // adding a new comment to make insignificant push
   return (
     <>
       <NavigationContainer>
