@@ -1,15 +1,13 @@
 import React, {Component} from 'react';
 
 import {
-  SafeAreaView,
   ScrollView,
   View,
   Text,
   Button,
   StyleSheet,
-  Image,
   ImageBackground,
-  TouchableOpacity
+  TouchableOpacity,
 } from 'react-native';
 
 import {Card} from 'react-native-elements';
@@ -42,7 +40,7 @@ class Home extends Component {
   }
 
   showMenu = () => {
-    alert("Menu button pressed");
+    alert('Menu button pressed');
   };
 
   navigateTo = (page, parameters) => {
@@ -69,11 +67,12 @@ class Home extends Component {
         <Card
           key={subject.id}
           style={styles.welcomeTextContainer}
-          title={subject.name}>
+          title={subject.name}
+        >
           <Text key={subject.id}>{subject.description}</Text>
           <Button
             key={subject.id + 1}
-            title="Go"
+            title="GO"
             type="clear"
             onPress={() => this.navigateTo('Practice', tempObj)}
           />
