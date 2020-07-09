@@ -346,7 +346,7 @@ B   donation to charity and social security contribution
 C  income tax and club subscription
 D   income tax and social security contribution
 Answer: D
-Category: Principles of Accounting
+Category: Principles of accounting
 
 Karim works 40 hours a week at a rate of $5 per hour and any overtime is paid at time and a half. He is paid monthly in arrears. He worked 12 hours, 16 hours and 18 hours overtime in May, June and July respectively. How much was Karim paid in June? (Assume 4 weeks in a month)
 A   $800
@@ -378,7 +378,7 @@ B   to enable accountants to get work easily anywhere in the world
 C  to enable non-accountants to understand all the information in financial statements
 D   to make it easier to compare financial statements prepared in different countries
 Answer: D
-Category: Principles of Accounting
+Category: Principles of accounting
 
 ###
 Nov2018(12)
@@ -517,7 +517,7 @@ B   1 only
 C   2 and 3
 D   3 only
 Answer: A
-Category: 
+Category: Shares and capital
 
 Which items are included in the equity section of the statement of financial position of a limited company?
 A   ordinary shares, retained earnings, debentures and current liabilities
@@ -581,7 +581,7 @@ B   dual aspect
 C   money measurement
 D   prudence
 Answer: D
-Category: Principles of Accounting
+Category: Principles of accounting
 
 What is the purpose of international accounting standards?
 A   to allow users to rely on the information in financial statements being error-free
@@ -589,5 +589,5 @@ B   to enable accountants to get work easily anywhere in the world
 C   to enable non-accountants to understand all the information in financial statements
 D   to make it easier to compare financial statements prepared in different countries
 Answer: D
-Category: Principles of Accounting
+Category: Principles of accounting
 
