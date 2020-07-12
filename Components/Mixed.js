@@ -19,7 +19,7 @@ class Mixed extends Component {
     super();
     this.state = {
       showResults: false,
-      quizQuestions: [],
+      AweeQuestions: [],
 
       // which feedback to show
       showOverallFeedback: false,
@@ -43,17 +43,17 @@ class Mixed extends Component {
       }
     }
     const allQuestions = allQues;
-    console.log('allquestions length: ', allQuestions.length);
-    for (let i = 0; i < allQuestions.length; i++) {
-      if (allQuestions[i].Guess !== '') {
-        console.log('ERRRRORRRR');
-        console.log(allQuestions[i]);
-      }
-    }
+    // console.log('allquestions length: ', allQuestions.length);
+    // for (let i = 0; i < allQuestions.length; i++) {
+    //   if (allQuestions[i].Guess !== '') {
+    //     console.log('ERRRRORRRR');
+    //     console.log(allQuestions[i]);
+    //   }
+    // }
 
     // extract 10 random questions from all questions
-    const numQuestions = 10;
-    let quizArr = [];
+    const numQuestions = 5;
+    let AweeArr = [];
     if (allQuestions.length !== 0) {
       for (let i = 0; i < allQuestions.length; i++) {
         let ind = Math.floor(Math.random() * allQuestions.length);
@@ -74,27 +74,27 @@ class Mixed extends Component {
 
         // console.log('Are the arrays same? ', newArr === allQuestions);
 
-        if (!quizArr.includes(newQuestion)) {
+        if (!AweeArr.includes(newQuestion)) {
           // make the body of the first card visible
-          if (quizArr.length === 0) {
+          if (AweeArr.length === 0) {
             newQuestion.ShowBody = true;
           }
-          quizArr.push(newQuestion);
+          AweeArr.push(newQuestion);
         }
 
-        if (quizArr.length >= numQuestions) {
+        if (AweeArr.length >= numQuestions) {
           break;
         }
       }
     }
-    // console.log('quizArray:');
-    // for (let i = 0; i < quizArr.length; i++) {
-    //   console.log('Guess: ', quizArr[i].Guess);
+    // console.log('AweeArray:');
+    // for (let i = 0; i < AweeArr.length; i++) {
+    //   console.log('Guess: ', AweeArr[i].Guess);
     // }
 
     // eslint-disable-next-line react/no-did-mount-set-state
     this.setState({
-      quizQuestions: quizArr,
+      AweeQuestions: AweeArr,
     });
   }
 
@@ -104,13 +104,13 @@ class Mixed extends Component {
 
   recordAnswer(index, guess) {
     // this.toggleShow(index);
-    this.state.quizQuestions[index].Guess = guess;
+    this.state.AweeQuestions[index].Guess = guess;
   }
 
   submitAnswers() {
     // console.log('======================SUBMITTING==================');
-    // for (let i = 0; i < this.state.quizQuestions.length; i++) {
-    //   console.log(this.state.quizQuestions[i]);
+    // for (let i = 0; i < this.state.AweeQuestions.length; i++) {
+    //   console.log(this.state.AweeQuestions[i]);
     // }
     this.setState({
       showResults: true,
@@ -134,9 +134,9 @@ class Mixed extends Component {
   render() {
     // const {subject} = this.props.route.params;
 
-    // Prepare the quizzing platform
+    // Prepare the Aweezing platform
     // create array of question components
-    let questions = this.state.quizQuestions.map((question, i) => {
+    let questions = this.state.AweeQuestions.map((question, i) => {
       return (
         <Question
           ques={question}
@@ -146,7 +146,7 @@ class Mixed extends Component {
         />
       );
     });
-    let quizPlatform = (
+    let AweePlatform = (
       <View>
         <ScrollView>
           <View>{questions}</View>
@@ -159,9 +159,9 @@ class Mixed extends Component {
 
     // prepare the results platform (to show results when submit is clicked)
     console.log('Cheatsheet: ');
-    for (let i = 0; i < this.state.quizQuestions.length; i++) {
-      console.log('Answer: ', this.state.quizQuestions[i].Answer);
-      console.log('Guess: ', this.state.quizQuestions[i].Guess);
+    for (let i = 0; i < this.state.AweeQuestions.length; i++) {
+      console.log('Answer: ', this.state.AweeQuestions[i].Answer);
+      console.log('Guess: ', this.state.AweeQuestions[i].Guess);
     }
     // find the number of correct, incorrect, and unattempted
     let resultPlatform = [];
@@ -172,8 +172,8 @@ class Mixed extends Component {
       // category array
       let categoryArray = [];
       // create the category array and counts needed for formulating results
-      for (let i = 0; i < this.state.quizQuestions.length; i++) {
-        let question = this.state.quizQuestions[i];
+      for (let i = 0; i < this.state.AweeQuestions.length; i++) {
+        let question = this.state.AweeQuestions[i];
         // checking if category already included
         // let arrayAlreadyContains = false;
         let categoryIndex = -1;
@@ -272,13 +272,13 @@ class Mixed extends Component {
         resultQuestions.push(
           <View
             style={styles.feedbackTitleContainer}
-            key={this.state.quizQuestions.length}
+            key={this.state.AweeQuestions.length}
           >
             <Text style={styles.feedbackTitle}>Overall Feedback</Text>
           </View>,
         );
         // put all the questions in the feedback
-        this.state.quizQuestions.map((question, i) => {
+        this.state.AweeQuestions.map((question, i) => {
           let tmp = (
             <ResultQuestion
               ques={question}
@@ -345,7 +345,7 @@ class Mixed extends Component {
           <ScrollView>
             <Card title="Results">
               <Text>{overallMessage}</Text>
-              <Text>You scored {correctPercentageStr} in the quiz!</Text>
+              <Text>You scored {correctPercentageStr} in the Awee!</Text>
               <Text>
                 Correct: {correctCount}/{totalCount}{' '}
               </Text>
@@ -363,7 +363,7 @@ class Mixed extends Component {
     }
 
     // decide which platform to show to the user
-    let platform = quizPlatform;
+    let platform = AweePlatform;
     if (this.state.showResults) {
       platform = resultPlatform;
     }

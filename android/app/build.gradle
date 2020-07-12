@@ -129,7 +129,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.awee"
+        applicationId "com.Awee"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

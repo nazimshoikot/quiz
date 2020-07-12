@@ -1,4 +1,4 @@
-package com.awee;
+package com.Awee;
 
 import com.facebook.react.ReactActivity;
 

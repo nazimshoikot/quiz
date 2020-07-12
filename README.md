@@ -1,5 +1,5 @@
-# quiz
-quiz repo to work in a team
+# Awee
+Awee repo to work in a team
 
 The app will allow students to practice mcq questions and get feedback on which areas to improve on. 
 
@@ -24,11 +24,11 @@ The app will allow students to practice mcq questions and get feedback on which 
 ## Functionality to be implemented ##
 #### Login
 #### Choose qualification, category, and type
-#### Quiz logic for mixed (done, needs to generalise)
-#### quiz logic for category 
-#### quiz logic for yearwise
+#### Awee logic for mixed (done, needs to generalise)
+#### Awee logic for category 
+#### Awee logic for yearwise
 #### Show results in a feedback manner
 #### Give recommendations
-#### Save the quizzes and questions user has already solved
+#### Save the Aweezes and questions user has already solved
 #### Monitor progress (how many other questions are remaining)
 #### Reward system (like khan academy/stackoverflow)
