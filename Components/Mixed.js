@@ -32,8 +32,23 @@ class Mixed extends Component {
   }
 
   componentDidMount() {
-    // get all the data
-    const data = require('./../Data/Accounting - Cambridge.json');
+    // decide which file to import (can be deleted if we can import dynamically)
+    let q = this.props.route.params.qualification.name;
+    let s = this.props.route.params.sub.name;
+    let data = [];
+    switch ((q, s)) {
+      case ('Cambridge-IGCSE', 'Accounting'):
+        console.log("Importing cambrdge accounting");
+        data = require('./../Data/Cambridge-IGCSE-Accounting.json');
+        break;
+      case ('Cambridge-IGCSE', 'Physics'):
+        data = require('./../Data/Cambridge-IGCSE-Physics.json');
+    }
+
+    console.log("Data: ", data.length);
+    
+    
+    // const data = require('./../Data/Cambridge-IGCSE-Accounting.json');
     let allQues = [];
     // console.log("Data length: ", data.length)
     // put all the questions from the years into allQuestions

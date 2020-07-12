@@ -4,10 +4,11 @@ import React, {Component} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
-import Home from './Components/Home.js';
+import Subject from './Components/Subject.js';
 import Practice from './Components/Practice.js';
 import Mixed from './Components/Mixed.js';
 import Category from './Components/Category.js';
+import Qualification from './Components/Qualification.js';
 
 const Stack = createStackNavigator();
 
@@ -19,7 +20,7 @@ const App = () => {
         <Stack.Navigator
           screenOptions={{
             headerStyle: {
-              backgroundColor: '#3E8DE5',
+              backgroundColor: '#889BE7',
             },
             headerTintColor: '#fff',
             headerTitleStyle: {
@@ -27,11 +28,11 @@ const App = () => {
             },
           }}
         >
-          <Stack.Screen name="Home" component={Home} />
+          <Stack.Screen name="Qualification" component={Qualification} />
+          <Stack.Screen name="Subject" component={Subject} />
           <Stack.Screen name="Practice" component={Practice} />
           <Stack.Screen name="MixedPractice" component={Mixed} />
           <Stack.Screen name="CategoryPractice" component={Category} />
-
         </Stack.Navigator>
       </NavigationContainer>
       {/* <Home /> */}
