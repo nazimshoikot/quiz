@@ -32,3 +32,9 @@ The app will allow students to practice mcq questions and get feedback on which 
 #### Save the quizzes and questions user has already solved
 #### Monitor progress (how many other questions are remaining)
 #### Reward system (like khan academy/stackoverflow)
+
+
+
+## THINGS TO DISCUSS
+#### VARCHAR length for database
+#### Image questions
