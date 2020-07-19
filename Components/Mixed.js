@@ -13,6 +13,7 @@ import {Card} from 'react-native-elements';
 
 import Question from './Question';
 import ResultQuestion from './ResultQuestion';
+import {ExecuteQuery} from './utils.js';
 
 class Mixed extends Component {
   constructor() {
@@ -32,86 +33,48 @@ class Mixed extends Component {
   }
 
   componentDidMount() {
-    // decide which file to import (can be deleted if we can import dynamically)
-    let q = this.props.route.params.qualification.name;
-    let s = this.props.route.params.sub.name;
-    let data = [];
-    switch ((q, s)) {
-      case ('Cambridge-IGCSE', 'Accounting'):
-        console.log("Importing cambrdge accounting");
-        data = require('./../Data/Cambridge-IGCSE-Accounting.json');
-        break;
-      case ('Cambridge-IGCSE', 'Physics'):
-        data = require('./../Data/Cambridge-IGCSE-Physics.json');
-    }
+    this.getRandomQuestions();
+  }
 
-    console.log("Data: ", data.length);
-    
-    
-    // const data = require('./../Data/Cambridge-IGCSE-Accounting.json');
-    let allQues = [];
-    // console.log("Data length: ", data.length)
-    // put all the questions from the years into allQuestions
-    for (let i = 0; i < data.length; i++) {
-      for (let j = 0; j < data[i].Questions.length; j++) {
-        allQues.push(data[i].Questions[j]);
-      }
-    }
-    const allQuestions = allQues;
-    console.log('allquestions length: ', allQuestions.length);
-    for (let i = 0; i < allQuestions.length; i++) {
-      if (allQuestions[i].Guess !== '') {
-        console.log('ERRRRORRRR');
-        console.log(allQuestions[i]);
-      }
-    }
+  getRandomQuestions = async () => {
+    let qualification = this.props.route.params.qualification.name;
+    let subject = this.props.route.params.sub.name;
+    let query = `SELECT * FROM Questions WHERE Qualification='${qualification}' 
+    AND Subject='${subject}' ORDER BY RANDOM()`;
+    let response = await ExecuteQuery(query, []);
+    let rows = response.rows;
+    console.log(response.rows);
 
-    // extract 10 random questions from all questions
-    const numQuestions = 10;
+    // create new objects for each question
+    let numQuestions = 5; // number of questions in quiz
     let quizArr = [];
-    if (allQuestions.length !== 0) {
-      for (let i = 0; i < allQuestions.length; i++) {
-        let ind = Math.floor(Math.random() * allQuestions.length);
-        // push the question into the arr
-        // console.log("Item: ", allQuestions[ind])
-        let q = allQuestions[ind];
-        // create a new object
-        let newQuestion = {
-          Question: q.Question,
-          A: q.A,
-          B: q.B,
-          C: q.C,
-          D: q.D,
-          Answer: q.Answer,
-          Category: q.Category,
-          Guess: q.Guess,
-        };
+    for (let i = 0; i < rows.length; i++) {
+      let q = rows.item(i);
+      // create a new object
+      let newQuestion = {
+        Question: q.Question,
+        A: q.A,
+        B: q.B,
+        C: q.C,
+        D: q.D,
+        Answer: q.Answer,
+        Category: q.Category,
+        Guess: q.Guess,
+      };
 
-        // console.log('Are the arrays same? ', newArr === allQuestions);
+      if (!quizArr.includes(newQuestion)) {
+        quizArr.push(newQuestion);
+      }
 
-        if (!quizArr.includes(newQuestion)) {
-          // make the body of the first card visible
-          if (quizArr.length === 0) {
-            newQuestion.ShowBody = true;
-          }
-          quizArr.push(newQuestion);
-        }
-
-        if (quizArr.length >= numQuestions) {
-          break;
-        }
+      if (quizArr.length >= numQuestions) {
+        break;
       }
     }
-    // console.log('quizArray:');
-    // for (let i = 0; i < quizArr.length; i++) {
-    //   console.log('Guess: ', quizArr[i].Guess);
-    // }
 
-    // eslint-disable-next-line react/no-did-mount-set-state
     this.setState({
       quizQuestions: quizArr,
     });
-  }
+  };
 
   navigateTo = (page, parameters) => {
     this.props.navigation.navigate(page, parameters);
@@ -173,11 +136,11 @@ class Mixed extends Component {
     );
 
     // prepare the results platform (to show results when submit is clicked)
-    console.log('Cheatsheet: ');
-    for (let i = 0; i < this.state.quizQuestions.length; i++) {
-      console.log('Answer: ', this.state.quizQuestions[i].Answer);
-      console.log('Guess: ', this.state.quizQuestions[i].Guess);
-    }
+    // console.log('Cheatsheet: ');
+    // for (let i = 0; i < this.state.quizQuestions.length; i++) {
+    //   console.log('Answer: ', this.state.quizQuestions[i].Answer);
+    //   console.log('Guess: ', this.state.quizQuestions[i].Guess);
+    // }
     // find the number of correct, incorrect, and unattempted
     let resultPlatform = [];
     if (this.state.showResults) {
