@@ -46,3 +46,9 @@ export const loadJSONFiles = () => {
   let allQuestions = accountingQuestions.concat(physicsQuestions);
   return allQuestions;
 };
+
+// general functions
+export const navigateTo = (navigation, page, parameters) => {
+  navigation.navigate(page, parameters);
+};
+

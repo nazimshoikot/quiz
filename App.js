@@ -10,7 +10,9 @@ import Mixed from './Components/Mixed.js';
 import Category from './Components/Category.js';
 import Qualification from './Components/Qualification.js';
 import {ExecuteQuery, loadJSONFiles} from './Components/utils.js';
-
+import Progress from './Components/Progress.js'
+import MixedResult from './Components/MixedResult.js';
+import MixedResultPage from './Components/MixedResultPage.js';
 const Stack = createStackNavigator();
 
 // create database
@@ -113,6 +115,8 @@ const App = () => {
           <Stack.Screen name="Practice" component={Practice} />
           <Stack.Screen name="MixedPractice" component={Mixed} />
           <Stack.Screen name="CategoryPractice" component={Category} />
+          <Stack.Screen name="Progress" component={Progress} />
+          <Stack.Screen name="MixedResultPage" component={MixedResultPage} />
         </Stack.Navigator>
       </NavigationContainer>
       {/* <Home /> */}

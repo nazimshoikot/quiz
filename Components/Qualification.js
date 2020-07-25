@@ -7,6 +7,7 @@ import {
   Text,
   TouchableOpacity,
   View,
+  Button,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import dataDetails from './../Data/AvailableDataDetails.json';
@@ -59,9 +60,14 @@ const Qualification = ({navigation}) => {
         renderItem={renderItem}
         keyExtractor={(item) => item.id}
       />
+      <Button
+        onPress={() => navigateTo(navigation, 'Progress', {})}
+        title="Progress"
+      />
     </SafeAreaView>
   );
 };
+
 
 const styles = StyleSheet.create({
   container: {
