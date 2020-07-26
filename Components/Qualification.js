@@ -60,10 +60,6 @@ const Qualification = ({navigation}) => {
         renderItem={renderItem}
         keyExtractor={(item) => item.id}
       />
-      <Button
-        onPress={() => navigateTo(navigation, 'Progress', {})}
-        title="Progress"
-      />
     </SafeAreaView>
   );
 };

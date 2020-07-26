@@ -35,6 +35,24 @@ const Practice = ({route, navigation}) => {
                   }
                 />
               </View>
+
+              <View style={styles.buttonContainer}>
+                <Button
+                  style={styles.navButton}
+                  title="Yearwise"
+                  onPress={() =>
+                    navigateTo(navigation, 'YearSelection', route.params)
+                  }
+                />
+              </View>
+              <View style={styles.buttonContainer}>
+                <Button
+                  onPress={() =>
+                    navigateTo(navigation, 'Progress', route.params)
+                  }
+                  title="Progress"
+                />
+              </View>
             </View>
           </Card>
         </View>

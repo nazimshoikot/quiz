@@ -1,16 +1,15 @@
+/* eslint-disable prettier/prettier */
 import React, {Component} from 'react';
 
 import {SafeAreaView, ScrollView, View, Text, StyleSheet} from 'react-native';
 
-import {Card} from 'react-native-elements';
 
 import Question from './Question';
-import ResultQuestion from './ResultQuestion';
 import {ExecuteQuery} from './utils.js';
 
-import Icon from 'react-native-vector-icons/AntDesign';
 import {Button} from 'react-native-elements';
 import MixedResult from './MixedResult';
+import LoadingSign from './LoadingSign.js';
 
 class Mixed extends Component {
   constructor() {
@@ -18,6 +17,9 @@ class Mixed extends Component {
     this.state = {
       showResults: false,
       quizQuestions: [],
+
+      // whether the page is loaded or not
+      isLoaded: false,
 
       // which feedback to show
       showOverallFeedback: false,
@@ -34,6 +36,7 @@ class Mixed extends Component {
   }
 
   getRandomQuestions = async () => {
+    console.log("GETTTING RANDOM QUESTIONS....");
     let qualification = this.props.route.params.qualification.name;
     let subject = this.props.route.params.sub.name;
     let query = `SELECT * FROM Questions WHERE Qualification='${qualification}' 
@@ -41,6 +44,22 @@ class Mixed extends Component {
     let response = await ExecuteQuery(query, []);
     let rows = response.rows;
     console.log(response.rows);
+
+    // get all the quizzes that have been done
+    query = `SELECT quiz_questions FROM "CompletedQuestions" WHERE 
+    qualification='${qualification}' AND subject='${subject}'
+    AND quiz_type='Mixed'`;
+    response = await ExecuteQuery(query, []);
+    let completedRows = response.rows;
+    // create an array of questions already completed
+    let completedQuestions = [];
+    for (let i = 0; i < completedRows.length; i++) {
+      let quiz_questions = JSON.parse(completedRows.item(i).quiz_questions); // get the array
+      for (let j = 0; j < quiz_questions.length; j++) {
+        completedQuestions.push(quiz_questions[j]);
+      }
+    }
+    console.log("Length: ", completedQuestions.length);
 
     // create new objects for each question
     let numQuestions = 5; // number of questions in quiz
@@ -69,6 +88,7 @@ class Mixed extends Component {
     }
 
     this.setState({
+      // isLoaded: true,
       quizQuestions: quizArr,
     });
   };
@@ -83,10 +103,6 @@ class Mixed extends Component {
   }
 
   submitAnswers() {
-    // console.log('======================SUBMITTING==================');
-    // for (let i = 0; i < this.state.quizQuestions.length; i++) {
-    //   console.log(this.state.quizQuestions[i]);
-    // }
     this.setState({
       showResults: true,
     });
@@ -119,12 +135,22 @@ class Mixed extends Component {
         />
       );
     });
+
+    // decide whether to show loading or submit
+    let submitButton = <LoadingSign />;
+    console.log("Loaded? ", this.state.isLoaded);
+    if (this.state.isLoaded) {
+      // show the submit button 
+      submitButton = (
+        <Button title="Submit" onPress={this.submitAnswers()} />
+      );
+    }
     return (
       <View>
         <ScrollView>
           <View>{questions}</View>
           <View>
-            <Button title="Submit" onPress={this.submitAnswers} />
+            {submitButton}
           </View>
         </ScrollView>
       </View>
@@ -151,11 +177,13 @@ class Mixed extends Component {
         qualification={qualification}
         subject={subject}
         type="Mixed"
+        year=""
       />
     );
   };
 
   render() {
+    console.log("RENDERING....")
     // get the quizzing platform
     let quizPlatform = this.getQuizzingPlatform();
     // this.showCheatsheet();

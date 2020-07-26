@@ -11,16 +11,17 @@ import Category from './Components/Category.js';
 import Qualification from './Components/Qualification.js';
 import {ExecuteQuery, loadJSONFiles} from './Components/utils.js';
 import Progress from './Components/Progress.js'
-import MixedResult from './Components/MixedResult.js';
 import MixedResultPage from './Components/MixedResultPage.js';
+import YearSelection from './Components/YearSelection.js';
+import YearWise from './Components/YearWise.js';
+
 const Stack = createStackNavigator();
 
 // create database
-
 async function populateDatabase() {
   // delete the table if it exists
-  let qu = 'DROP TABLE IF EXISTS Questions';
-  let r = await ExecuteQuery(qu, []);
+  // let qu = 'DROP TABLE IF EXISTS Questions';
+  // let r = await ExecuteQuery(qu, []);
 
   // check if the table exists
   let query =
@@ -116,7 +117,9 @@ const App = () => {
           <Stack.Screen name="MixedPractice" component={Mixed} />
           <Stack.Screen name="CategoryPractice" component={Category} />
           <Stack.Screen name="Progress" component={Progress} />
-          <Stack.Screen name="MixedResultPage" component={MixedResultPage} />
+          <Stack.Screen name="Result" component={MixedResultPage} />
+          <Stack.Screen name="YearSelection" component={YearSelection} />
+          <Stack.Screen name="YearWise" component={YearWise} />
         </Stack.Navigator>
       </NavigationContainer>
       {/* <Home /> */}
@@ -126,45 +129,3 @@ const App = () => {
 };
 
 export default App;
-
-// //
-// if (populate) {
-//   console.log('=================================Running population');
-//   // Drop the table if it exists
-//   txn.executeSql('DROP TABLE IF EXISTS Questions', [], (tx, res) => {
-//     console.log(res);
-//   });
-
-//   // Create the table and define the properties of the columns
-//   query =
-//     'CREATE TABLE IF NOT EXISTS Questions(user_id INTEGER PRIMARY KEY NOT NULL, name VARCHAR(30))';
-//   txn.executeSql(query, [], (tx, res) => {
-//     console.log(res);
-//   });
-
-//   // Insert a record
-//   txn.executeSql(
-//     'INSERT INTO Questions (name) VALUES (:name)',
-//     ['oldQuestion1'],
-//     (tx, res) => {
-//       console.log(res);
-//     },
-//   );
-// }
-
-// //  // Insert another record
-// //  txn.executeSql('INSERT INTO Questions (name) VALUES (:name)', [
-// //    'oldQuestion2',
-// //  ]);
-
-// // Select all inserted records, loop over them while printing them on the console.
-// txn.executeSql('SELECT * FROM `Questions`', [], function (_tx, res) {
-//   for (let i = 0; i < res.rows.length; i++) {
-//     console.log('item:"', i, '"number', res.rows.item(i));
-//   }
-// });
-
-// // Drop the table if it exists
-// txn.executeSql('DROP TABLE IF EXISTS Questions', [], (tx, res) => {
-//   console.log(res);
-// });

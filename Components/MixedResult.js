@@ -1,3 +1,5 @@
+/* eslint-disable quotes */
+/* eslint-disable prettier/prettier */
 import React, {useState} from 'react';
 
 import {SafeAreaView, ScrollView, View, Text, StyleSheet} from 'react-native';
@@ -11,8 +13,7 @@ import Icon from 'react-native-vector-icons/AntDesign';
 
 const MixedResult = (props) => {
   let arr = props.arr;
-  console.log('Inside mixed result');
-  console.log('ARR: ', props.arr);
+  // console.log('ARR: ', props.arr);
   // declare state
   const [showOverallFeedback, setShowOverallFeedback] = useState(false);
   const [showCategoryFeedback, setShowCategoryFeedback] = useState(false);
@@ -31,10 +32,11 @@ const MixedResult = (props) => {
     // get the parameters
     // convert into string
     let questionStr = JSON.stringify(arr);
-    
+
     // delete the table if it exists
-//   let qu = 'DROP TABLE IF EXISTS CompletedQuestions';
-//   let r = await ExecuteQuery(qu, []);
+    // let qu = 'DROP TABLE IF EXISTS CompletedQuestions';
+    
+    // let r = await ExecuteQuery(qu, []);
 
     // create the table if it does not exist
     let query = `CREATE TABLE IF NOT EXISTS "CompletedQuestions" (
@@ -43,20 +45,40 @@ const MixedResult = (props) => {
         "quiz_type" TEXT NOT NULL,
         "qualification" TEXT NOT NULL,
         "subject" TEXT NOT NULL,
+        "year" TEXT NOT NULL,
+        "category" TEXT NOT NULL,
         PRIMARY KEY("quiz_id")
     )`;
     let response = await ExecuteQuery(query, []);
     let rows = response.rows;
     console.log("Checked with table creation")
     // insert the questions into the table
+    
     query = `INSERT INTO "CompletedQuestions" (quiz_questions, quiz_type,
-         qualification, subject) VALUES (?, ?, ?, ?)`;
+      qualification, subject, year, category) VALUES (?, ?, ?, ?, ?, ?)`;
+    // if (props.type === "Mixed") {
+    //   response = await ExecuteQuery(query, [
+    //       questionStr,
+    //       props.type,
+    //       props.qualification,
+    //       props.subject,
+    //       "",
+    //       "",
+    //   ]);
+    // } else if (props.type === "Year") {
     response = await ExecuteQuery(query, [
-      questionStr,
-      props.type,
-      props.qualification,
-      props.subject,
+        questionStr,
+        props.type,
+        props.qualification,
+        props.subject,
+        props.year,
+        "",
     ]);
+    // } else {
+    //   console.log("TYPE NOT RECOGNISED");
+    //   return;
+    // }
+    
     console.log("Inserting response: ", response.rows);
 
     query = 'SELECT * FROM "CompletedQuestions"';
@@ -125,7 +147,7 @@ const MixedResult = (props) => {
       }
     }
   }
-  console.log('Category Array in new: ', categoryArray);
+  // console.log('Category Array in new: ', categoryArray);
 
   // Give a general result
   let totalCount = correctCount + errorCount + unattemptedCount;
@@ -135,13 +157,13 @@ const MixedResult = (props) => {
   // decide if the student did excellent, good, bad, or failed.
   let overallMessage = '';
   if (correctPercentage >= 90) {
-    overallMessage = 'Excellent!';
+    overallMessage = 'Excellent! You aced the test!';
   } else if (correctPercentage >= 75) {
-    overallMessage = 'Good!';
+    overallMessage = 'Good! You got most of the questions right!';
   } else if (correctPercentage >= 50) {
-    overallMessage = "Passed. Let's try one more.";
+    overallMessage = "Passed. Let's try one more!";
   } else {
-    overallMessage = "Failed. Bruh you don't know shit.";
+    overallMessage = "Failed. Keep practising to get better!";
   }
 
   // let the students decide which type of feedback they want
