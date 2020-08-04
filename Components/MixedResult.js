@@ -33,9 +33,8 @@ const MixedResult = (props) => {
     // convert into string
     let questionStr = JSON.stringify(arr);
 
-    // delete the table if it exists
+    // // delete the table if it exists
     // let qu = 'DROP TABLE IF EXISTS CompletedQuestions';
-    
     // let r = await ExecuteQuery(qu, []);
 
     // create the table if it does not exist

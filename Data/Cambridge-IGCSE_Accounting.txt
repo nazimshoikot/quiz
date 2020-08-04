@@ -1,5 +1,200 @@
 ###
-May2019
+MAY2019(11)
+
+1 Which task is undertaken by an accountant?
+A extracting a trial balance
+B maintaining a petty cash book
+C preparing an income statement
+D writing up a cash book
+Answer: C
+Category: 
+
+2 What are advantages of using ICT (Information and Communications Technology) in book-keeping and accounting? 1 Accounts are instantly updated and a new balance calculated after each entry. 2 Accuracy is increased as entries only need to be input once. 3 Documents such as invoices can be produced quickly and accurately.
+A 1 and 2 only 
+B 1 only 
+C 1, 2 and 3 
+D 2 and 3 only
+Answer: C
+Category: 
+
+3 Which does not reduce the owner’s capital?
+A business expenses paid using a personal cheque
+B cash withdrawn from the business bank account for personal use
+C goods taken from inventory for personal use
+D personal expenses paid using business cash
+Answer: A
+Category: 
+
+4 A statement of account issued to a customer on 31 March 2019 showed the following information. invoices 250, credit note 10, cash discount 5% if payment made within 14 days of date of statement of account. The customer made payment on 12 April 2019. How much did the customer pay?
+A $227.50 
+B $228 
+C $237.50 
+D $247 
+Answer: B
+Category: 
+
+6 Suzi owed $200 for goods supplied by Mandy. Suzi paid the amount owing by cheque, after deducting a cash discount of $10. Which entries would Suzi make in Mandy’s account to record this transaction?
+A credit entries: bank $190, discount $10
+B credit entries: bank $200, discount $10
+C debit entries: bank $190, discount $10
+D debit entries: bank $200, discount $10 
+Answer: C
+Category: 
+
+8 A trial balance is a listing of which balances?
+A assets
+B closing balances of all accounts
+C liabilities
+D opening balances of all accounts
+Answer: B
+Category: 
+
+9 A business purchased a motor vehicle, $8900, on credit from AKS Limited. The book-keeper made an error of reversal when recording this purchase. What was the incorrect debit entry he made?
+A AKS Limited 8900
+B AKS Limited 9800
+C motor vehicles 8900
+D motor vehicles 9800 
+Answer: A
+Category: 
+
+10 Ali’s financial year ends on 31 March. During the year ended 31 March 2019, Ali paid wages of $42 500. On 31 March 2019, $1400 wages were accrued. Which journal entry records the transfer from the wages account to the income statement on 31 March 2019?
+A income statement dr 42 500 wages cr 42 500
+B income statement dr 43 900 wages 43 900
+C wages dr 42 500 income statement cr 42 500
+D wages income dr 43 900 statement cr 43 900
+Answer: B
+Category: 
+
+11 On 1 March 2019, a trader paid rent of $1200 covering the period 1 March 2019 to 31 May 2019. The trader’s financial year ends on 31 March 2019. What balance was brought down on the rent payable account on 1 April 2019?
+A credit $400
+B credit $800
+C debit $400
+D debit $800
+Answer: D
+Category: 
+
+12 An amount owed by Baloch was written off. Which entries were made?
+A bad debts dr, Baloch cr
+B bad debts dr, provision for doubtful debts cr
+C Baloch dr, bad debts cr
+D provision for doubtful debts dr, Baloch cr
+Answer: A
+Category: 
+
+13 Kevin depreciated his motor vehicle by $2000 at the end of the financial year. Which journal entry would record this?
+A income statement dr 2000, provision for depreciation of motor vehicles cr 2000
+B motor vehicles dr 2000, provision for depreciation of motor vehicles cr 2000
+C provision for depreciation of motor vehicles dr 2000, income statement cr 2000
+D provision for depreciation of motor vehicles dr 2000, motor vehicles cr 2000
+Answer: A
+Category: 
+
+14 Ravi’s financial year ends on 30 April. Ravi bought a motor vehicle for $8000 on 1 May 2016 and sold it for $4050 on 1 May 2018. He uses the diminishing (reducing) balance method of depreciation at 20% per annum. What would be recorded in the income statement for the year ended 30 April 2019 for the disposal of the motor vehicle?
+A $750 loss
+B $750 profit
+C $1070 loss
+D $1070 profit
+Answer: C
+Category: 
+
+15 Which would not appear in a sales ledger control account?
+A bad debts written off
+B cash discount allowed
+C customer’s cheque dishonoured
+D provision for doubtful debts 
+Answer: D
+Category: 
+
+17 Which section of a statement of financial position would include goodwill?
+A current assets
+B current liabilities
+C non-current assets
+D non-current liabilities
+Answer: C
+Category: 
+
+18 At the end of the financial year Omar was owed $200 by a credit customer and he owed $10 for electricity. He also had a 2-year bank loan of $5000. In which sections of Omar’s statement of financial position will these items appear?  credit customer, unpaid electricity bill, loan from bank (answer according to order)
+A current assets, current assets, non-current assets
+B current assets, current liabilities, non-current liabilities
+C current liabilities, non-current assets, current assets
+D current liabilities, non-current liabilities, current liabilities 
+Answer: B
+Category: 
+
+20 A golf club sells refreshments to its members. Suppliers of refreshments were owed $250 on 1 January 2018 and $400 on 31 December 2018. Payments to suppliers during the year were $7200. The inventory at the end of the year was $100 less than the inventory at the start of the year. What was the cost of sales of refreshments for the year ended 31 December 2018?
+A $7050 
+B $7150 
+C $7300 
+D $7450 
+Answer: D
+Category: 
+
+22 Sue started a business on 1 January 2019. The only accounting record she maintained was a bank account. Why is the balance on the bank account not equal to the profit for the year? 1 Expenses may be accrued at the year-end. 2 Goods may have been taken for personal use. 3 Non-current assets may have depreciated.
+A 1 and 2 only 
+B 1 only 
+C 1, 2 and 3 
+D 2 and 3 only 
+Answer: C
+Category: 
+
+24 What does not appear in a statement of changes in equity?
+A debenture interest paid
+B interim dividend paid on ordinary shares
+C issue of ordinary shares
+D transfer to general reserve 
+Answer: A
+Category: 
+
+25 Which cost would be included in prime cost in a manufacturing account?
+A depreciation of machinery
+B factory manager’s salary
+C insurance
+D royalties
+Answer: D
+Category: 
+
+26 Jacob works 30 hours each week and is paid $10 per hour. He pays income tax at 30%, national insurance at 10% and makes a voluntary contribution to charity of 5%. What is his net weekly pay?
+A $165 
+B $180 
+C $195 
+D $210
+Answer: A
+Category: 
+
+27 A business’s sales are $100 000, the expenses are $30 000 and the profit for the year is $20 000. What is the gross profit/sales ratio?
+A 10% 
+B 50% 
+C 70% 
+D 80%
+Answer: B
+Category: 
+
+28 A trader provided the following information. profit for the year 24 000, working capital 20 000, capital 120 000, non-current liability 30 000. What was the return on capital employed?
+A 14.12% 
+B 16.00% 
+C 17.14% 
+D 20.00% 
+Answer: B
+Category: 
+
+29 A business prepares its accounts on the basis that it will continue to trade in the foreseeable future. Which accounting principle is being applied?
+A accounting entity
+B accounting year
+C going concern
+D matching/accruals 
+Answer: C
+Category: 
+
+30 Which statement is not correct about reasons for using international accounting standards?
+A helps when making comparisons between companies
+B improves the reliability of accounting information
+C narrows the areas of difference between companies
+D makes the preparation of financial statements less time consuming 
+Answer: D
+Category: 
+
+###
+MAY2019(12)
 
 What is the main function of book-keeping?
 A communicating information
@@ -154,7 +349,7 @@ Answer: D
 Category: Principles of accounting
 
 ###
-Nov2018(11)
+NOV2018(11)
 
 Which statements about book-keeping and accounting are correct? Accounting is performed periodically rather than daily. Accounting relies on having accurate book-keeping records. Book-keeping includes the preparation of financial statements. Book-keeping involves the recording of financial transac
 A   1, 2 and 4
@@ -381,7 +576,7 @@ Answer: D
 Category: Principles of accounting
 
 ###
-Nov2018(12)
+NOV2018(12)
 
 Ava had $4000 in the bank. She paid a supplier $575 by cheque in full settlement of $600 owing. Which changes would take place within the accounting equation?
 A   assets owner’s equity (capital) liabilities –$600 –$25 –$625
@@ -590,4 +785,664 @@ C   to enable non-accountants to understand all the information in financial sta
 D   to make it easier to compare financial statements prepared in different countries
 Answer: D
 Category: Principles of accounting
+
+###
+MAY2018(12)
+
+Which statement about a computerised accounting system is correct?
+A   The general ledger does not include non-current asset accounts.
+B   The income statement always shows a profit.
+C   The statement of financial position does not include non-current assets.
+D   The trial balance always balances.
+Answer: D
+Category: 
+
+Which group contains only liabilities?
+A   bank loan, trade payables, prepaid rent
+B   bank overdraft, trade payables, unpaid wages
+C   trade payables, cash at bank, unpaid rates
+D   trade payables, inventory, unpaid wages
+Answer: B
+Category: 
+
+What is the accounting equation?
+A   assets – liabilities = capital
+B   assets + liabilities = capital
+C   liabilities – assets = capital
+D   liabilities – capital = assets
+Answer: A
+Category: 
+
+Omar returned faulty goods to Yasmin, the supplier. Which document did Omar send to Yasmin?
+A   credit note
+B   debit note
+C   invoic
+D   statement of account
+Answer: B
+Category: 
+
+What may a credit balance on a ledger account represent?
+A   accrued income
+B   asset
+C   expense
+D   prepaid income
+Answer: D
+Category: 
+
+The totals of a trial balance did not agree. The total of the debit column was $13 400. It was found that the purchases journal had been overcast by $195 and goods bought from supplier X for $85 had been incorrectly credited to Y. What was the total of the credit column of the trial balance?
+A   $13 120
+B   $13 205
+C   $13 595
+D   $13 680
+Answer: B
+Category: 
+
+Leo is unable to pay the debt he owes to Sam. Which entry did Sam make to write off this bad debt?
+A   debit credit bad debts account income statement
+B   debit credit bad debts account Leo account
+C   debit credit income statement Leo account
+D   debit credit Leo account income statement
+Answer: B
+Category: 
+
+Rashid maintains a provision for doubtful debts of 5% of the trade receivables at the end of each year. Trade receivables owed $40 000 on 31 March 2017. Trade receivables owed $46 000 on 31 March 2018. Which journal entry should Rashid make on 31 March 2018?
+A   debit $ credit $ income statement 300 provision for doubtful debts 300
+B   debit $ credit $ income statement 2300 provision for doubtful debts 2300
+C   debit $ credit $ provision for doubtful debts 300 income statement 300
+D   debit $ credit $ provision for doubtful debts 2300 income statement 2300
+Answer: A
+Category: 
+
+What are examples of revenue receipts? 1)a cheque received from the sale of a non-current asset at book value, 2)a profit made on the sale of a non-current asset, 3)a loan from a bank that is repayable in 2020, 4)discounts received from credit suppliers for prompt payment
+A   1 and 3
+B   1 and 4
+C   2 and 3
+D   2 and 4
+Answer: D
+Category: 
+
+Jon paid $18 000 for machinery on 1 January 2016. He depreciated this asset using the diminishing (reducing) balance method at 5% per annum. What was the balance on the provision for depreciation account on 1 January 2018?
+A   $1755 credit
+B   $1755 debit
+C   $1800 credit
+D   $1800 debit
+Answer: A
+Category: 
+
+A motor vehicle cost $20 000. It was sold for $12 000. At the date of disposal the motor vehicle had been depreciated by $7200. Which journal entry records the closing of the disposal account?
+A   debit $ credit $ disposal account 800 income statement 800
+B   debit $ credit $ disposal account 8000 income statement 8000
+C   debit $ credit $ income statement 800 disposal account 800
+D   debit $ credit $ income statement 800 disposal account 800
+Answer: C
+Category: 
+
+James was late paying an invoice issued by Henry. Henry charged James interest on the overdue amount. Which entry would be made in Henry’s control accounts?
+A   credit purchases ledger control account
+B   credit sales ledger control account
+C   debit purchases ledger control account
+D   debit sales ledger control account
+Answer: D
+Category: 
+
+Dennis runs a business with two departments, one selling carpets and one selling furniture. Total sales were $210 000 of which 60% related to the carpet department. The total gross profit was $54 600 of which 60% related to the furniture department. What was the cost of sales of the carpet department?
+A   $51 240
+B   $62 160
+C   $93 240
+D   $104 160
+Answer: D
+Category: 
+
+Which is an intangible asset?
+A   buildings
+B   goodwill
+C   inventory
+D   trade receivables
+Answer: B
+Category: 
+
+A business has no non-current liabilities. What is added to the non-current assets in order to calculate the capital employed?
+A   current assets
+B   current liabilities
+C   owner’s capital
+D   working capital
+Answer: D
+Category: 
+
+Which item is credited in a partnership appropriation account?
+A   interest on capital
+B   interest on drawings
+C   partners’ drawings
+D   partners’ salaries
+Answer: B
+Category: 
+
+Y and Z formed a partnership and agreed to share profits equally. Y deposited $30 000 into the business bank account. Z introduced a motor vehicle worth $15 000 and goodwill of $15 000. How should these transactions be recorded in the books of the partnership?
+A   accounts to be debited $ accounts to be credited $ bank 30 000 capital Y 30 000 goodwill 15 000 capital Z 30 000 motor vehicle 15 000
+B   accounts to be debited $ accounts to be credited $ bank 30 000 capital Y 37 500 goodwill 15 000 capital Z 22 500 motor vehicle 15 000
+C   accounts to be debited $ accounts to be credited $ Capital Y 30 000 Bank 30 0000 capital Z 30 000 goodwill 15 000 motor vehicle 15 000
+D   accounts to be debited $ accounts to be credited $ Capital Y 37 500 Bank 30 0000 capital Z 22 500 goodwill 15 000 motor vehicle 15 000
+Answer: A
+Category: 
+
+A business provided the following information. revenue 	100 000 gross profit 20 000 What was the percentage mark-up?
+A   20%
+B   25%
+C   75%
+D   80%
+Answer: B
+Category: 
+
+A trader does not keep a full set of accounting records. How can he calculate credit sales?
+A   cheques received from customers + owed by customers at start of year + owed by customers at end of year
+B   cheques received from customers + owed by customers at start of year – owed by customers at end of year
+C   cheques received from customers – owed by customers at start of year + owed by customers at end of year
+D   cheques received from customers – owed by customers at start of year – owed by customers at end of year
+Answer: C
+Category: 
+
+Which item would be entered in a statement of changes in equity?
+A   debenture interest accrued
+B   debenture interest paid
+C   ordinary dividend paid for current year
+D   ordinary dividend proposed for current year
+Answer: C
+Category: 
+
+On 1 January NH Limited was formed with the issue of 200 000 ordinary shares of $0.50 each. During the first year it made a profit of $21 000. A dividend of $0.02 per share was paid and $10 000 was transferred to general reserve. What was the total of reserves on 31 December?
+A   $7000
+B   $9000
+C   $17 000
+D   $19 000
+Answer: C
+Category: 
+
+Which type of labour would be classified as direct? factory managers, factory office staff, factory production workers.
+A   1, 2 and 3
+B   1 and 3 only
+C   2 only
+D   3 only
+Answer: D
+Category: 
+
+A manufacturing business provided the following information. prime cost	30 500,  factory overheads	17 200, cost of goods produced	46 000,  office and selling expenses	9 500,  opening work-in-progress	5 100,  What was the value of the closing work-in-progress?
+A   $1700
+B   $3400
+C   $6800
+D   $16 300
+Answer: C
+Category: 
+
+Which document is used to inform employees of their social security / national insurance contributions?
+A   clock card
+B   payroll register
+C   payslip
+D   time sheet
+Answer: C
+Category: 
+
+A trader spreads the cost of a machine over the years which benefit from the use of that machine. Which accounting principle is being applied?
+A   accounting year
+B   dual aspect
+C   matching / accruals
+D   materiality
+Answer: C
+Category: 
+
+###
+MAY2018(13)
+
+Which statement about a computerised accounting system is correct?
+A The general ledger does not include non-current asset accounts.
+B The income statement always shows a profit.
+C The statement of financial position does not include non-current assets.
+D The trial balance always balances.
+Answer: D
+Category: 
+
+Which item is a liability?
+A accrued interest on loan to employee
+B insurance premium paid in advance
+C rent receivable paid in advance
+D short-term loan to employee
+Answer: C
+Category: 
+
+What is the accounting equation?
+A assets – liabilities = capital
+B assets + liabilities = capital
+C liabilities – assets = capital
+D liabilities – capital = assets
+Answer: A
+Category: 
+
+A retailer received a credit note from his wholesaler. Where would the wholesaler record this?
+A cash book
+B general journal
+C purchases returns journal
+D sales returns journal 
+Answer: D
+Category: 
+
+The balance of the bank column in a trader’s cash book was $520 debit. The trader discovered the following did not appear on the bank statement. A cheque, $80, paid to a supplier. A cheque, $470, paid into the bank. What was the balance on the trader’s bank statement?
+A $130 credit 
+B $130 debit 
+C $910 credit 
+D $910 debit
+Answer: A
+Category: 
+
+Which error is an error of principle?
+A A cheque for $100 received from X was credited to Y’s account.
+B A purchase invoice of $400 had not been entered in the ledger accounts.
+C A purchase of a delivery vehicle, $12 000, was debited to the purchases account.
+D Rent paid, $200, was debited to the bank account and credited to the rent account.
+Answer: C
+Category: 
+
+Which type of error is corrected using a suspense account?
+A commission
+B compensating
+C original entry
+D single entry 
+Answer: D
+Category: 
+
+James was late paying an invoice issued by Henry. Henry charged James interest on the overdue amount. Which entry would be made in Henry’s control accounts?
+A credit purchases ledger control account
+B credit sales ledger control account
+C debit purchases ledger control account
+D debit sales ledger control account
+Answer: D
+Category: 
+
+Which is an intangible asset?
+A buildings
+B goodwill
+C inventory
+D trade receivables
+Answer: B
+Category: 
+
+A business has no non-current liabilities. What is added to the non-current assets in order to calculate the capital employed?
+A current assets
+B current liabilities
+C owner’s capital
+D working capital 
+Answer: D
+Category: 
+
+Which is a service business?
+A a bakery
+B a car showroom
+C a hairdresser
+D a newsagent
+Answer: C
+Category: 
+
+At the end of Carol’s financial year on 30 April 2018, a tenant had paid rent in advance. What was the effect of adjusting for this prepaid rent?
+A increase profit for the year, increase current assets
+B increase profit for the year, increase current liabilities
+C reduce profit for the year, increase current assets
+D reduce profit for the year, increase current liabilities
+Answer: D
+Category: 
+
+What would not appear in the receipts and payments account of a sports club?
+A cost of repairing equipment
+B depreciation of equipment
+C proceeds of sale of old equipment
+D purchase of new equipment 
+Answer: B
+Category: 
+
+Which item would be entered in a statement of changes in equity?
+A debenture interest accrued
+B debenture interest paid
+C ordinary dividend paid for current year
+D ordinary dividend proposed for current year
+Answer: C
+Category: 
+
+On 1 January NH Limited was formed with the issue of 200 000 ordinary shares of $0.50 each. During the first year it made a profit of $21 000. A dividend of $0.02 per share was paid and $10 000 was transferred to general reserve. What was the total of reserves on 31 December?
+A $7000 
+B $9000 
+C $17 000 
+D $19 000
+Answer: C
+Category: 
+
+What is included in prime cost in a manufacturing account?
+A carriage outwards
+B depreciation of factory machinery
+C factory manager’s salary
+D royalties
+Answer: D
+Category: 
+
+Where is work-in-progress shown in the statement of financial position of a manufacturing business?
+A current assets
+B current liabilities
+C non-current assets
+D non-current liabilities 
+Answer: A
+Category: 
+
+A company provided the following information about its working capital ratio (current ratio). Year 1 2 : 1, Year 2 1.8 : 1, Year 3 1.6 : 1. What would explain the changes in the ratio?
+A Cash at bank is increasing.
+B Inventory is increasing.
+C Trade payables are increasing.
+D Trade receivables are increasing.
+Answer: C
+Category: 
+
+What will not be included in the accounting records of a business?
+A cash received from sales
+B cost of goods sold
+C quality of product produced
+D value of inventory held 
+Answer: C
+Category: 
+
+###
+NOV2017(12)
+
+Which statement about a computerised accounting system is correct?
+A Anyone with a computer can gain access to the accounting records.
+B Data input can only be used for one specific purpose.
+C Data output can only be understood by computer programmers.
+D Operator error may result in inaccurate information.
+Answer: D
+Category: 
+
+What increases owner’s capital?
+A bank loan extended from five to ten years
+B purchase of inventory on credit
+C purchase of machinery by cheque
+D transfer of vehicle to business from private use 
+Answer: D
+Category: 
+
+Which transaction is recorded in the general journal?
+A payment of cash into a business bank account
+B purchase of a motor vehicle on credit
+C receipt of a cheque from a customer
+D sale of goods on credit 
+Answer: B
+Category: 
+
+The totals of a trial balance agreed. What does this mean?
+A All the arithmetic in the ledger is correct.
+B All transactions have been entered in the correct ledger accounts.
+C All transactions have been entered on the correct sides of the ledger.
+D Total debit balances equal total credit balances in the ledger. 
+Answer: D
+Category: 
+
+Which are examples of capital receipts? 1 a loan received from a bank, repayable in three years’ time. 2 a profit made on the sale of a non-current asset. 3 cash received from the sale of a non-current asset at book value. 4 rent received from letting part of the business premises to a tenant.
+A 1 and 3 
+B 1 and 4 
+C 2 and 3 
+D 2 and 4 
+Answer: A
+Category: 
+
+A café owner decided to use the revaluation method to calculate depreciation on the kitchen equipment. Kitchen equipment costing $3200 was purchased on 1 January 2016. This was expected to have a useful life of 4 years. Additional kitchen equipment was purchased during the year for $400. The total kitchen equipment was valued at $2900 on 31 December 2016. What was the depreciation charge for the year ended 31 December 2016?
+A $300 
+B $700 
+C $800 
+D $900 
+Answer: B
+Category: 
+
+Imran’s financial year ends on 31 December. A machine purchased on 1 January 2015 for $20 000 was sold on 30 June 2017 for $8500. The machine had been depreciated using the straight-line method at 25% per annum on a month by month basis. What was the profit or loss on the disposal of the machine?
+A loss $1000
+B loss $1500
+C profit $1000
+D profit $1500 
+Answer: C
+Category: 
+
+Anita’s business has two departments, X and Y. She provided the following information for department X. expenses 28 000, profit for the year 9 000 Total revenue for the year was $180000 of which one-third related to department X. What was the gross profit of department X?
+A $19 000 
+B $32 000 
+C $37 000 
+D $51 000
+Answer: C
+Category: 
+
+How is owner’s equity calculated?
+A non-current assets + current assets – current liabilities – non-current liabilities
+B non-current assets + current assets + current liabilities + non-current liabilities
+C non-current assets – current assets – current liabilities – non-current liabilities
+D non-current assets – current assets + current liabilities + non-current liabilities 
+Answer: A
+Category: 
+
+David provided the following information. capital employed 435 000, non-current assets 200 000, current liabilities 124 000. What was the total of his current assets?
+A $235 000 
+B $359 000 
+C $559 000 
+D $759 000 
+Answer: B
+Category: 
+
+Gurpreet is a broker and receives a commission from an insurance company when a client purchases a car insurance policy. The following information is available for the year ended 31 March 2017. commission received from insurance company 15 000, commission on policies arranged in  March 2017 not yet received 1 200, office rent 2 500, depreciation of non-current assets 900, heating and lighting 520. What was the profit for the year?
+A $10 780 
+B $11 080 
+C $11 980 
+D $12 280 
+Answer: D
+Category: 
+
+What is the disadvantage to a sole trader of bringing in a partner?
+A The business will benefit from the knowledge of the new partner.
+B The new partner may bring additional capital into the business.
+C The profits made by the business will have to be shared with the new partner.
+D The responsibility for running the business may be shared with the new partner. 
+Answer: C
+Category: 
+
+A club had an accumulated fund at the start of the year of $18 000 and at the end of the year of $16 200. Total running costs for the year were $9550. New equipment costing $1100 was bought during the year. The only income came from subscriptions. How much were subscriptions for the year?
+A $7750 
+B $8850 
+C $11 350 
+D $12 450 
+Answer: A
+Category: 
+
+Karim did not keep proper accounting records, but was able to provide the following information. capital at 1 January 58 000, drawings during the year 8 500, capital introduced in the year 15 000, capital at 31 December 82 500, What was the profit for the year?
+A $16 000 
+B $18 000 
+C $33 000 
+D $48 000 
+Answer: B
+Category: 
+
+A trader has not kept proper accounting records for his business. What will he use when calculating trade payables at the end of the year?
+A bad debt written off
+B discount allowed
+C returns inwards
+D returns outwards 
+Answer: D
+Category: 
+
+The issued share capital of CD Limited consists of ordinary shares. Retained earnings were $86 000 on 1 September 2016 and $88 500 on 31 August 2017. The company made a profit during the year of $26 000 and made a transfer to general reserve of $5000. What was the total ordinary share dividend paid during the year?
+A $18 500 
+B $23 500 
+C $28 500 
+D $33 500 
+Answer: A
+Category: 
+
+Which document shows employees the details of deductions made from their wages?
+A clock card
+B payslip
+C time sheet
+D wages sheet
+Answer: B
+Category: 
+
+What is not included when calculating the quick ratio (acid test ratio)?
+A bank overdraft
+B inventory
+C short-term bank loan
+D trade receivables
+Answer: B
+Category: 
+
+Manvinder started a business and paid a cheque for $1000 into a business bank account. He recorded this in the books of the business by debiting the bank account and crediting the capital account. Which accounting principles did he apply?
+A accounting entity and dual aspect
+B accounting entity and going concern
+C going concern and matching /accruals
+D matching / accruals and dual aspect
+Answer: A
+Category: 
+
+###
+NOV2017(11)
+
+What would be the most useful way of monitoring the progress of a retail business?
+A comparing the financial statements of one year with those of previous years
+B comparing the financial statements with those of a business in another country
+C comparing the financial statements with those of a business of a different size
+D comparing the financial statements with those of a manufacturing business
+Answer: A
+Category: 
+
+Which statement about a computerised accounting system is correct?
+A Anyone with a computer can gain access to the accounting records.
+B Data input can only be used for one specific purpose.
+C Data output can only be understood by computer programmers.
+D Operator error may result in inaccurate information.
+Answer: D
+Category: 
+
+What increases owner’s capital?
+A bank loan extended from five to ten years
+B purchase of inventory on credit
+C purchase of machinery by cheque
+D transfer of vehicle to business from private use
+Answer: D
+Category: 
+
+Which account always has a credit balance?
+A capital account
+B cash account
+C drawings account
+D premises account
+Answer: A
+Category: 
+
+Kamal purchases and sells goods on credit. Where does he maintain the accounts of his credit suppliers?
+A purchases journal
+B purchases ledger
+C sales journal
+D sales ledger
+Answer: B
+Category: 
+
+Which transaction of a manufacturer would be entered in the general journal?
+A payment of wages by cash
+B purchase of raw materials on credit
+C sales of finished goods on credit
+D writing off a bad debt 
+Answer: D
+Category: 
+
+10 The totals of a trial balance agreed. What does this mean?
+A All the arithmetic in the ledger is correct.
+B All transactions have been entered in the correct ledger accounts.
+C All transactions have been entered on the correct sides of the ledger.
+D Total debit balances equal total credit balances in the ledger
+Answer: D
+Category: 
+
+Ann’s financial year ends on 31 August. The annual rates on her shop are $3000. On 1 September 2016 rates prepaid amounted to $750. Rates paid during the year ended 31 August 2017 amounted to $2750. What was the balance brought down on the rates account on 1 September 2017?
+A $250 credit
+B $250 debit
+C $500 credit
+D $500 debit 
+Answer: D
+Category: 
+
+A trader incorrectly posted sales returns of $100 to the credit of purchases returns account. What was the effect on the gross profit?
+A overstated $100
+B overstated $200
+C understated $100
+D understated $200 
+Answer: B
+Category: 
+
+Which business is not a service business?
+A accountant’s practice
+B computer repair shop
+C flower shop
+D hairdressing salon 
+Answer: C
+Category: 
+
+What is a disadvantage of forming a partnership?
+A additional skills are available
+B profits are shared
+C responsibilities are shared
+D risks are shared 
+Answer: B
+Category: 
+
+A golf club has 230 members. The annual subscription is $100. At the beginning of the year subscriptions prepaid amounted to $1000 and at the end of the year subscriptions in arrears amounted to $1500. How much did the club receive for subscriptions during the year?
+A $20500 
+B $22500 
+C $23500 
+D $25500
+Answer: A
+Category: 
+
+What would not appear in the income and expenditure account of a sports club?
+A cost of sports equipment
+B depreciation of sports equipment
+C insurance of sports equipment
+D repairs to sports equipment
+Answer: A
+Category: 
+
+Karim did not keep proper accounting records, but was able to provide the following information. capital at 1 January 58000, drawings during the year 8500, capital introduced in the year 15000, capital at 31 December 82500. What was the profit for the year?
+A $16000 
+B $18000 
+C $33000 
+D $48000
+Answer: B
+Category: 
+
+Sumit does not maintain a full set of accounting records. What does Sumit not need to calculate his credit sales?
+A customer’s dishonoured cheque
+B discounts allowed
+C discounts received
+D returns inwards
+Answer: C
+Category: 
+
+Which is shown as loan capital in the statement of financial position of a limited company?
+A bank overdraft
+B debentures
+C ordinary shares
+D preference shares 
+Answer: B
+Category: 
+
+Stephan’s major competitor has invested in a new machine for making goods more cheaply. Stephan knows this will affect his sales but did not record this in his accounting records. Which accounting principle is Stephan applying?
+A going concern
+B materiality
+C money measurement
+D prudence
+Answer: C
+Category: 
+
+At the end of the financial year Omar’s inventory was 100 units of which 10 units were damaged and could not be sold. The selling price per unit is $5 and the cost price per unit is $3.50. Which value should Omar place on his inventory?
+A $315 
+B $350 
+C $450 
+D $500
+Answer: A
+Category: 
 

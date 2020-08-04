@@ -81,14 +81,15 @@ async function populateDatabase() {
     // table is already there
     console.log('NOT POPULATINGGG');
     // print out first five for checking
-    // query = 'SELECT * FROM Questions';
-    // response = await ExecuteQuery(query, []);
+    query = 'SELECT * FROM Questions';
+    response = await ExecuteQuery(query, []);
     // for (let i = 0; i < response.rows.length; i++){
     //   console.log(response.rows.item(i));
     //   if (i === 4) {
     //     break;
     //   }
     // }
+    console.log("Number of questions: ", response.rows.length);
   }
 }
 

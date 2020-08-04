@@ -35,6 +35,29 @@ class Mixed extends Component {
     this.getRandomQuestions();
   }
 
+  alreadyCompleted = (completedArr, newQuestion) => {
+    
+    for (let i = 0; i < completedArr.length; i++) {
+      if (completedArr[i].D === newQuestion.D) {
+        if (completedArr[i].A === newQuestion.A) {
+          if (completedArr[i].B === newQuestion.B) {
+            if (completedArr[i].C === newQuestion.C) { 
+              if (completedArr[i].Question === newQuestion.Question) {
+                  // console.log("ALLLLREADYYYYY EXISTTTTTTTTTTTTTSSS")
+                  // console.log(completedArr[i])
+                  // console.log(newQuestion)
+                  return true;
+              }
+            }
+          }
+
+        }
+      }
+    }
+    return false;
+  };
+
+  // get the questions needed for the quiz
   getRandomQuestions = async () => {
     console.log("GETTTING RANDOM QUESTIONS....");
     let qualification = this.props.route.params.qualification.name;
@@ -59,11 +82,13 @@ class Mixed extends Component {
         completedQuestions.push(quiz_questions[j]);
       }
     }
-    console.log("Length: ", completedQuestions.length);
+    console.log("Length of completed: ", completedQuestions.length);
 
     // create new objects for each question
-    let numQuestions = 5; // number of questions in quiz
+    let numQuestions = 20; // number of questions in quiz
     let quizArr = [];
+    console.log("Length of all: ", rows.length);
+    // console.log("Comleted: ", completedQuestions);
     for (let i = 0; i < rows.length; i++) {
       let q = rows.item(i);
       // create a new object
@@ -77,8 +102,9 @@ class Mixed extends Component {
         Category: q.Category,
         Guess: q.Guess,
       };
-
-      if (!quizArr.includes(newQuestion)) {
+      // console.log("Question: ", newQuestion);
+      if (!quizArr.includes(newQuestion) &&
+            !this.alreadyCompleted(completedQuestions, newQuestion)) {
         quizArr.push(newQuestion);
       }
 
@@ -88,7 +114,7 @@ class Mixed extends Component {
     }
 
     this.setState({
-      // isLoaded: true,
+      isLoaded: true,
       quizQuestions: quizArr,
     });
   };
@@ -135,16 +161,35 @@ class Mixed extends Component {
         />
       );
     });
-
+    
     // decide whether to show loading or submit
     let submitButton = <LoadingSign />;
-    console.log("Loaded? ", this.state.isLoaded);
     if (this.state.isLoaded) {
       // show the submit button 
       submitButton = (
-        <Button title="Submit" onPress={this.submitAnswers()} />
+        <Button title="Submit" onPress={this.submitAnswers} />
       );
     }
+
+    // if no questions left to show
+    if (questions.length === 0) {
+      // dont show any submit buttton
+      submitButton = (
+        <View style={styles.oval}>
+          <Button title="Check Progress" />
+        </View>
+      );
+
+      // give him the message that all questions are done
+      questions.push(
+        <Text key={1}>
+          All mixed questions from this qualification completed. Go to progress
+          to see results or retry the quizzes. 
+        </Text>
+      );
+
+    }
+
     return (
       <View>
         <ScrollView>
@@ -183,7 +228,6 @@ class Mixed extends Component {
   };
 
   render() {
-    console.log("RENDERING....")
     // get the quizzing platform
     let quizPlatform = this.getQuizzingPlatform();
     // this.showCheatsheet();
@@ -230,6 +274,11 @@ const styles = StyleSheet.create({
   questionIcon: {
     margin: 5,
   },
+  oval: {
+    borderRadius: 50,
+    margin: 20,
+    backgroundColor: "red",
+  }
 });
 
 export default Mixed;
