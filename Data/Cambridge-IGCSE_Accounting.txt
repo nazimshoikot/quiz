@@ -1,7 +1,7 @@
 ###
 MAY2019(11)
 
-1 Which task is undertaken by an accountant?
+Which task is undertaken by an accountant?
 A extracting a trial balance
 B maintaining a petty cash book
 C preparing an income statement
@@ -9,7 +9,7 @@ D writing up a cash book
 Answer: C
 Category: 
 
-2 What are advantages of using ICT (Information and Communications Technology) in book-keeping and accounting? 1 Accounts are instantly updated and a new balance calculated after each entry. 2 Accuracy is increased as entries only need to be input once. 3 Documents such as invoices can be produced quickly and accurately.
+What are advantages of using ICT (Information and Communications Technology) in book-keeping and accounting? 1 Accounts are instantly updated and a new balance calculated after each entry. 2 Accuracy is increased as entries only need to be input once. 3 Documents such as invoices can be produced quickly and accurately.
 A 1 and 2 only 
 B 1 only 
 C 1, 2 and 3 
@@ -17,7 +17,7 @@ D 2 and 3 only
 Answer: C
 Category: 
 
-3 Which does not reduce the owner’s capital?
+Which does not reduce the owner’s capital?
 A business expenses paid using a personal cheque
 B cash withdrawn from the business bank account for personal use
 C goods taken from inventory for personal use
@@ -25,7 +25,7 @@ D personal expenses paid using business cash
 Answer: A
 Category: 
 
-4 A statement of account issued to a customer on 31 March 2019 showed the following information. invoices 250, credit note 10, cash discount 5% if payment made within 14 days of date of statement of account. The customer made payment on 12 April 2019. How much did the customer pay?
+A statement of account issued to a customer on 31 March 2019 showed the following information. invoices 250, credit note 10, cash discount 5% if payment made within 14 days of date of statement of account. The customer made payment on 12 April 2019. How much did the customer pay?
 A $227.50 
 B $228 
 C $237.50 
@@ -33,7 +33,7 @@ D $247
 Answer: B
 Category: 
 
-6 Suzi owed $200 for goods supplied by Mandy. Suzi paid the amount owing by cheque, after deducting a cash discount of $10. Which entries would Suzi make in Mandy’s account to record this transaction?
+Suzi owed $200 for goods supplied by Mandy. Suzi paid the amount owing by cheque, after deducting a cash discount of $10. Which entries would Suzi make in Mandy’s account to record this transaction?
 A credit entries: bank $190, discount $10
 B credit entries: bank $200, discount $10
 C debit entries: bank $190, discount $10
@@ -41,7 +41,7 @@ D debit entries: bank $200, discount $10
 Answer: C
 Category: 
 
-8 A trial balance is a listing of which balances?
+A trial balance is a listing of which balances?
 A assets
 B closing balances of all accounts
 C liabilities
@@ -49,7 +49,7 @@ D opening balances of all accounts
 Answer: B
 Category: 
 
-9 A business purchased a motor vehicle, $8900, on credit from AKS Limited. The book-keeper made an error of reversal when recording this purchase. What was the incorrect debit entry he made?
+A business purchased a motor vehicle, $8900, on credit from AKS Limited. The book-keeper made an error of reversal when recording this purchase. What was the incorrect debit entry he made?
 A AKS Limited 8900
 B AKS Limited 9800
 C motor vehicles 8900
@@ -57,7 +57,7 @@ D motor vehicles 9800
 Answer: A
 Category: 
 
-10 Ali’s financial year ends on 31 March. During the year ended 31 March 2019, Ali paid wages of $42 500. On 31 March 2019, $1400 wages were accrued. Which journal entry records the transfer from the wages account to the income statement on 31 March 2019?
+Ali’s financial year ends on 31 March. During the year ended 31 March 2019, Ali paid wages of $42 500. On 31 March 2019, $1400 wages were accrued. Which journal entry records the transfer from the wages account to the income statement on 31 March 2019?
 A income statement dr 42 500 wages cr 42 500
 B income statement dr 43 900 wages 43 900
 C wages dr 42 500 income statement cr 42 500
@@ -65,7 +65,7 @@ D wages income dr 43 900 statement cr 43 900
 Answer: B
 Category: 
 
-11 On 1 March 2019, a trader paid rent of $1200 covering the period 1 March 2019 to 31 May 2019. The trader’s financial year ends on 31 March 2019. What balance was brought down on the rent payable account on 1 April 2019?
+On 1 March 2019, a trader paid rent of $1200 covering the period 1 March 2019 to 31 May 2019. The trader’s financial year ends on 31 March 2019. What balance was brought down on the rent payable account on 1 April 2019?
 A credit $400
 B credit $800
 C debit $400
@@ -73,7 +73,7 @@ D debit $800
 Answer: D
 Category: 
 
-12 An amount owed by Baloch was written off. Which entries were made?
+An amount owed by Baloch was written off. Which entries were made?
 A bad debts dr, Baloch cr
 B bad debts dr, provision for doubtful debts cr
 C Baloch dr, bad debts cr
@@ -81,7 +81,7 @@ D provision for doubtful debts dr, Baloch cr
 Answer: A
 Category: 
 
-13 Kevin depreciated his motor vehicle by $2000 at the end of the financial year. Which journal entry would record this?
+Kevin depreciated his motor vehicle by $2000 at the end of the financial year. Which journal entry would record this?
 A income statement dr 2000, provision for depreciation of motor vehicles cr 2000
 B motor vehicles dr 2000, provision for depreciation of motor vehicles cr 2000
 C provision for depreciation of motor vehicles dr 2000, income statement cr 2000
@@ -89,7 +89,7 @@ D provision for depreciation of motor vehicles dr 2000, motor vehicles cr 2000
 Answer: A
 Category: 
 
-14 Ravi’s financial year ends on 30 April. Ravi bought a motor vehicle for $8000 on 1 May 2016 and sold it for $4050 on 1 May 2018. He uses the diminishing (reducing) balance method of depreciation at 20% per annum. What would be recorded in the income statement for the year ended 30 April 2019 for the disposal of the motor vehicle?
+Ravi’s financial year ends on 30 April. Ravi bought a motor vehicle for $8000 on 1 May 2016 and sold it for $4050 on 1 May 2018. He uses the diminishing (reducing) balance method of depreciation at 20% per annum. What would be recorded in the income statement for the year ended 30 April 2019 for the disposal of the motor vehicle?
 A $750 loss
 B $750 profit
 C $1070 loss
@@ -97,7 +97,7 @@ D $1070 profit
 Answer: C
 Category: 
 
-15 Which would not appear in a sales ledger control account?
+Which would not appear in a sales ledger control account?
 A bad debts written off
 B cash discount allowed
 C customer’s cheque dishonoured
@@ -105,7 +105,7 @@ D provision for doubtful debts
 Answer: D
 Category: 
 
-17 Which section of a statement of financial position would include goodwill?
+Which section of a statement of financial position would include goodwill?
 A current assets
 B current liabilities
 C non-current assets
@@ -113,7 +113,7 @@ D non-current liabilities
 Answer: C
 Category: 
 
-18 At the end of the financial year Omar was owed $200 by a credit customer and he owed $10 for electricity. He also had a 2-year bank loan of $5000. In which sections of Omar’s statement of financial position will these items appear?  credit customer, unpaid electricity bill, loan from bank (answer according to order)
+At the end of the financial year Omar was owed $200 by a credit customer and he owed $10 for electricity. He also had a 2-year bank loan of $5000. In which sections of Omar’s statement of financial position will these items appear?  credit customer, unpaid electricity bill, loan from bank (answer according to order)
 A current assets, current assets, non-current assets
 B current assets, current liabilities, non-current liabilities
 C current liabilities, non-current assets, current assets
@@ -121,7 +121,7 @@ D current liabilities, non-current liabilities, current liabilities
 Answer: B
 Category: 
 
-20 A golf club sells refreshments to its members. Suppliers of refreshments were owed $250 on 1 January 2018 and $400 on 31 December 2018. Payments to suppliers during the year were $7200. The inventory at the end of the year was $100 less than the inventory at the start of the year. What was the cost of sales of refreshments for the year ended 31 December 2018?
+A golf club sells refreshments to its members. Suppliers of refreshments were owed $250 on 1 January 2018 and $400 on 31 December 2018. Payments to suppliers during the year were $7200. The inventory at the end of the year was $100 less than the inventory at the start of the year. What was the cost of sales of refreshments for the year ended 31 December 2018?
 A $7050 
 B $7150 
 C $7300 
@@ -129,7 +129,7 @@ D $7450
 Answer: D
 Category: 
 
-22 Sue started a business on 1 January 2019. The only accounting record she maintained was a bank account. Why is the balance on the bank account not equal to the profit for the year? 1 Expenses may be accrued at the year-end. 2 Goods may have been taken for personal use. 3 Non-current assets may have depreciated.
+Sue started a business on 1 January 2019. The only accounting record she maintained was a bank account. Why is the balance on the bank account not equal to the profit for the year? 1 Expenses may be accrued at the year-end. 2 Goods may have been taken for personal use. 3 Non-current assets may have depreciated.
 A 1 and 2 only 
 B 1 only 
 C 1, 2 and 3 
@@ -137,7 +137,7 @@ D 2 and 3 only
 Answer: C
 Category: 
 
-24 What does not appear in a statement of changes in equity?
+What does not appear in a statement of changes in equity?
 A debenture interest paid
 B interim dividend paid on ordinary shares
 C issue of ordinary shares
@@ -145,7 +145,7 @@ D transfer to general reserve
 Answer: A
 Category: 
 
-25 Which cost would be included in prime cost in a manufacturing account?
+Which cost would be included in prime cost in a manufacturing account?
 A depreciation of machinery
 B factory manager’s salary
 C insurance
@@ -153,7 +153,7 @@ D royalties
 Answer: D
 Category: 
 
-26 Jacob works 30 hours each week and is paid $10 per hour. He pays income tax at 30%, national insurance at 10% and makes a voluntary contribution to charity of 5%. What is his net weekly pay?
+Jacob works 30 hours each week and is paid $10 per hour. He pays income tax at 30%, national insurance at 10% and makes a voluntary contribution to charity of 5%. What is his net weekly pay?
 A $165 
 B $180 
 C $195 
@@ -161,7 +161,7 @@ D $210
 Answer: A
 Category: 
 
-27 A business’s sales are $100 000, the expenses are $30 000 and the profit for the year is $20 000. What is the gross profit/sales ratio?
+A business’s sales are $100 000, the expenses are $30 000 and the profit for the year is $20 000. What is the gross profit/sales ratio?
 A 10% 
 B 50% 
 C 70% 
@@ -169,7 +169,7 @@ D 80%
 Answer: B
 Category: 
 
-28 A trader provided the following information. profit for the year 24 000, working capital 20 000, capital 120 000, non-current liability 30 000. What was the return on capital employed?
+A trader provided the following information. profit for the year 24 000, working capital 20 000, capital 120 000, non-current liability 30 000. What was the return on capital employed?
 A 14.12% 
 B 16.00% 
 C 17.14% 
@@ -177,7 +177,7 @@ D 20.00%
 Answer: B
 Category: 
 
-29 A business prepares its accounts on the basis that it will continue to trade in the foreseeable future. Which accounting principle is being applied?
+A business prepares its accounts on the basis that it will continue to trade in the foreseeable future. Which accounting principle is being applied?
 A accounting entity
 B accounting year
 C going concern
@@ -185,7 +185,7 @@ D matching/accruals
 Answer: C
 Category: 
 
-30 Which statement is not correct about reasons for using international accounting standards?
+Which statement is not correct about reasons for using international accounting standards?
 A helps when making comparisons between companies
 B improves the reliability of accounting information
 C narrows the areas of difference between companies

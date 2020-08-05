@@ -29,9 +29,9 @@ const Practice = ({route, navigation}) => {
               <View style={styles.buttonContainer}>
                 <Button
                   style={styles.navButton}
-                  title="Category X"
+                  title="Category"
                   onPress={() =>
-                    navigateTo(navigation, 'CategoryPractice', route.params)
+                    navigateTo(navigation, 'CategorySelection', route.params)
                   }
                 />
               </View>

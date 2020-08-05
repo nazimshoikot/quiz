@@ -6,8 +6,6 @@ import {SafeAreaView, ScrollView, View, Text, StyleSheet} from 'react-native';
 
 import {Card} from 'react-native-elements';
 
-import Question from './Question';
-import ResultQuestion from './ResultQuestion';
 import {ExecuteQuery, navigateTo} from './utils.js';
 import {Picker} from '@react-native-community/picker';
 import Icon from 'react-native-vector-icons/AntDesign';
@@ -23,106 +21,109 @@ const QuizResult = (props) => {
       // onPress={() => navigateTo(props.navigation, 'Result', obj)}
     >
       <View style={styles.quizResultContainer}>
-        <Text style={styles.quizResult}>{props.year}</Text>
+        <Text style={styles.quizResult}>{props.Category}</Text>
       </View>
     </TouchableOpacity>
   );
 };
 
-const YearSelection = ({route, navigation}) => {
+const CategorySelection = ({route, navigation}) => {
   // states
-  const [allYears, setAllYears] = useState([]);
+  const [allCategories, setAllCategories] = useState([]);
   const [selectedValue, setSelectedValue] = useState("none");
-  const [completedYears, setCompletedYears] = useState([]);
-
+  const [completedCategories, setCompletedCategories] = useState([]);
 
   // get data from database
   useEffect(() => {
-    getAllYears();
+    getAllCategories();
   }, []); // call component did mount
 
-  const getAllYears = async () => {
+  // gets all the categories for users to select
+  const getAllCategories = async () => {
     // get the qualification and subject
     let qualification = route.params.qualification.name;
     let subject = route.params.sub.name;
-    // query the database to get all years available for this qualification
+    // query the database to get all Categories available for this qualification
     // and subject
-    let query = `SELECT DISTINCT Year FROM Questions WHERE Qualification='${qualification}' 
+    let query = `SELECT DISTINCT Category FROM Questions WHERE Qualification='${qualification}' 
     AND Subject='${subject}'`;
     let response = await ExecuteQuery(query, []);
     let rows = response.rows;
 
-    // create an array of years
-    let years = [];
+    // create an array of Categories
+    let Categories = [];
     for (let i = 0; i < rows.length; i++) {
-      years.push(rows.item(i).Year);
+        if (rows.item(i).Category !== "") {
+            Categories.push(rows.item(i).Category);
+
+        }
     }
-    // get the years that have already been saved
-    query = `SELECT DISTINCT year FROM "CompletedQuestions" WHERE qualification='${qualification}' 
-    AND subject='${subject}' AND quiz_type='Year'`;
+    // get the Categories that have already been saved
+    query = `SELECT DISTINCT category FROM "CompletedQuestions" WHERE qualification='${qualification}' 
+    AND subject='${subject}' AND quiz_type='Category'`;
     response = await ExecuteQuery(query, []);
     rows = response.rows;
-    console.log("Years saved: ");
+    console.log("Categories saved: ");
     for (let i = 0; i < rows.length; i++) {
       console.log(rows.item(i));
     }
 
-    // remove the years that have already been solved
+    // remove the Categories that have already been solved
     for (let i = 0; i < rows.length; i++) {
-      let tmp = rows.item(i).year;
-      let ind = years.indexOf(tmp);
+      let tmp = rows.item(i).Category;
+      let ind = Categories.indexOf(tmp);
       if (ind !== -1){
-        years.splice(ind,1);
+        Categories.splice(ind,1);
       }
     }
-
-    // create array for years already completed
+    console.log("Categories: ", Categories);
+    // create array for Categories already completed
     let tmpArr = [];
     for (let i = 0; i < rows.length; i++) {
-      let tmp = rows.item(i).year;
+      let tmp = rows.item(i).Category;
       tmpArr.push(tmp);
     }
     
-    // set the years array for the componen
-    setSelectedValue(years[0]);
-    setAllYears(years);
-    setCompletedYears(tmpArr);
+    // set the Categories array for the componen
+    setSelectedValue(Categories[0]);
+    setAllCategories(Categories);
+    setCompletedCategories(tmpArr);
   };
 
-  const createCompletedYearsComponent = () => {
-    // create a list of years completed
-    let completedYearsComponent = null;
-    let completedYearsBody = completedYears.map( (year, i) => {
+  const createCompletedCategoriesComponent = () => {
+    // create a list of Categories completed
+    let completedCategoriesComponent = null;
+    let completedCategoriesBody = completedCategories.map( (Category, i) => {
       return (
         <QuizResult
             key={i}
             navigation={navigation}
             // id={i}
-            year={year}
+            Category={Category}
         />
       );
     });
-    if (completedYearsBody.length > 0) {
-      completedYearsComponent = (
+    if (completedCategoriesBody.length > 0) {
+      completedCategoriesComponent = (
         <View>
-          <Text style={styles.quizResult}>Years already completed</Text>
-          {completedYearsBody}
+          <Text style={styles.quizResult}>Categories already completed</Text>
+          {completedCategoriesBody}
         </View>
 
       );
     }
-    return completedYearsComponent;
+    return completedCategoriesComponent;
   };
 
   const createPickerComponent = () => {
-    // create the body of the picker with all the years
-    let pickerBody = allYears.map( (year, i) => {
+    // create the body of the picker with all the Categories
+    let pickerBody = allCategories.map( (Category, i) => {
       return (
-        <Picker.Item key={i} label={year} value={year} />
+        <Picker.Item key={i} label={Category} value={Category} />
       );
     });
     // create picker component
-    let yearPicker = (
+    let CategoryPicker = (
       <View>
         <Picker
           selectedValue={selectedValue}
@@ -133,38 +134,38 @@ const YearSelection = ({route, navigation}) => {
         </Picker>
       </View>
     );
-    return yearPicker;
+    return CategoryPicker;
   };
 
   // get picker element
-  let yearPicker = createPickerComponent();
-  // get completed years component
-  let completedYearsComponent = createCompletedYearsComponent();
+  let CategoryPicker = createPickerComponent();
+  // get completed Categories component
+  let completedCategoriesComponent = createCompletedCategoriesComponent();
 
-  // create the object to send to yearwise
+  // create the object to send to Categorywise
   let obj = {
     subject : route.params.sub.name,
     qualification : route.params.qualification.name,
-    year : selectedValue,
+    category : selectedValue,
   };
 
-  // show all years for user to select
+  // show all Categories for user to select
   return (
     <SafeAreaView>
       <ScrollView>
         <View style={styles.rootContainer}>
           <View>
-            <Text style={styles.yearHeading}>Select a year:</Text>
+            <Text style={styles.CategoryHeading}>Select a Category:</Text>
           </View>
           <View>
-            {yearPicker}
+            {CategoryPicker}
           </View>
         </View>
         <View>
-          <Button title="Practice!" onPress={() => navigateTo(navigation, "YearWise", obj)}/>
+          <Button title="Practice!" onPress={() => navigateTo(navigation, "CategoryPractice", obj)}/>
         </View>
         <View>
-          {completedYearsComponent}
+          {completedCategoriesComponent}
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -173,7 +174,7 @@ const YearSelection = ({route, navigation}) => {
 };
 
 const styles = StyleSheet.create({
-  yearHeading: {
+  CategoryHeading: {
     fontSize: 24,
   },
   rootContainer: {
@@ -196,4 +197,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default YearSelection;
+export default CategorySelection;

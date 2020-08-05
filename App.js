@@ -7,13 +7,14 @@ import {createStackNavigator} from '@react-navigation/stack';
 import Subject from './Components/Subject.js';
 import Practice from './Components/Practice.js';
 import Mixed from './Components/Mixed.js';
-import Category from './Components/Category.js';
 import Qualification from './Components/Qualification.js';
 import {ExecuteQuery, loadJSONFiles} from './Components/utils.js';
 import Progress from './Components/Progress.js'
 import MixedResultPage from './Components/MixedResultPage.js';
 import YearSelection from './Components/YearSelection.js';
 import YearWise from './Components/YearWise.js';
+import CategoryQuiz from './Components/CategoryQuiz.js';
+import CategorySelection from './Components/CategorySelection.js';
 
 const Stack = createStackNavigator();
 
@@ -116,7 +117,11 @@ const App = () => {
           <Stack.Screen name="Subject" component={Subject} />
           <Stack.Screen name="Practice" component={Practice} />
           <Stack.Screen name="MixedPractice" component={Mixed} />
-          <Stack.Screen name="CategoryPractice" component={Category} />
+          <Stack.Screen
+            name="CategorySelection"
+            component={CategorySelection}
+          />
+          <Stack.Screen name="CategoryPractice" component={CategoryQuiz} />
           <Stack.Screen name="Progress" component={Progress} />
           <Stack.Screen name="Result" component={MixedResultPage} />
           <Stack.Screen name="YearSelection" component={YearSelection} />
