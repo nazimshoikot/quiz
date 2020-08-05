@@ -11,14 +11,17 @@ import (
 )
 
 type Question struct {
-	Question string
-	A        string
-	B        string
-	C        string
-	D        string
-	Answer   string
-	Category string
-	Guess    string
+	Question      string
+	A             string
+	B             string
+	C             string
+	D             string
+	Answer        string
+	Category      string
+	Guess         string
+	Year          string
+	Qualification string
+	Subject       string
 }
 
 type YearWise struct {
@@ -27,39 +30,40 @@ type YearWise struct {
 }
 
 func convertToJSON(filename string) {
+
 	data, err := ioutil.ReadFile(filename)
 	if err != nil {
 		fmt.Println("Could not read file")
 		return
 	}
+	// extract the qualification
+	filename = strings.Split(filename, ".")[0]
+	nameSplitArr := strings.Split(filename, "_")
+	qualification := nameSplitArr[0]
+	subject := nameSplitArr[1]
+
 	// separate by year
 	yearArr := strings.Split(string(data), "###")
 	yearArr = yearArr[1:]
 
 	// final array
-	storedArray := make([]YearWise, 0)
+	storedArray := make([]Question, 0)
 
 	for _, item := range yearArr {
 		str := item
 
 		// find the two newlines and split into array of questions
 		pattern := regexp.MustCompile(`(\r?\n){2}`)
-		// fmt.Println(pattern.FindAllIndex([]byte(str), -1))
 
 		// split the questions into an array
 		questionsArr := pattern.Split(str, -1)
 		questionsArr = questionsArr[:len(questionsArr)-1]
-		// fmt.Println("Length: ", len(questionsArr))
 		year := strings.Trim(questionsArr[0], "\r\n")
 		questionsArr = questionsArr[1:]
-		// fmt.Println("Year: ", year)
-		// fmt.Println("2nd: ", questionsArr[1])
-		// fmt.Println("last: ", questionsArr[len(questionsArr)-1])
 
 		// write the json file
 		questionsArray := make([]Question, 0)
 		for _, question := range questionsArr {
-			// fmt.Println("question: ", question)
 			// split using new line
 			qArr := strings.Split(question, "\r\n")
 			if len(qArr) != 7 {
@@ -85,7 +89,8 @@ func convertToJSON(filename string) {
 			categ := strings.Trim(qArr[6][catIndex+1:], " ")
 
 			var q Question
-			q = Question{ques, A, B, C, D, Answer, categ, ""} // add answer later
+			q = Question{ques, A, B, C, D, Answer, categ, "", year, qualification, subject} // add answer later
+			storedArray = append(storedArray, q)
 			questionsArray = append(questionsArray, q)
 
 			// fmt.Printf("%+v\n", q)
@@ -94,13 +99,18 @@ func convertToJSON(filename string) {
 
 		}
 		fmt.Println("Year:", year, ",", "Number of questions: ", len(questionsArray))
-		var yearQuestions YearWise
-		yearQuestions = YearWise{year, questionsArray}
-		storedArray = append(storedArray, yearQuestions)
+		// storedArray = append(storedArray, questionsArray)
+		// var yearQuestions YearWise
+		// yearQuestions = YearWise{year, questionsArray}
+		// storedArray = append(storedArray, yearQuestions)
+
+		// append to final arr
+
 	}
+	fmt.Println("Number of years recorded ", len(yearArr))
+	fmt.Println("Total number of questions: ", len(storedArray))
 
 	// fmt.Println("Array: ", storedArray)
-	fmt.Println("Number of years recorded ", len(storedArray))
 
 	// write the questions array into json file
 	// create a file and defer close it

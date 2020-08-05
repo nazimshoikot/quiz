@@ -10,6 +10,7 @@ import {
 
 import {Card} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+<<<<<<< HEAD
 
 const subjects = [
   {
@@ -21,6 +22,9 @@ const subjects = [
     id: '2',
   },
 ];
+=======
+import dataDetails from './../Data/AvailableDataDetails.json';
+>>>>>>> e1ce50ca6b97b109e6eb7d5d094a1f87eb6f863e
 
 const showMenu = () => {
   // eslint-disable-next-line no-alert
@@ -31,7 +35,12 @@ const navigateTo = (navigation, page, parameters) => {
   navigation.navigate(page, parameters);
 };
 
+<<<<<<< HEAD
 const Home = ({navigation}) => {
+=======
+const Subject = ({route, navigation}) => {
+  // const {qualification} = route.params.qualification;
+>>>>>>> e1ce50ca6b97b109e6eb7d5d094a1f87eb6f863e
   // define options button
   let menuButton = (
     <TouchableOpacity onPress={showMenu}>
@@ -44,9 +53,19 @@ const Home = ({navigation}) => {
     headerRight: () => menuButton,
   });
 
+<<<<<<< HEAD
   // make a card for each subject
   let subjectCards = subjects.map((subject) => {
     let tempObj = {sub: subject};
+=======
+  // get the subjects from the file
+  const subjects = dataDetails.subjects;
+
+  // make a card for each subject
+  let subjectCards = subjects.map((subject) => {
+    let tempObj = {sub: subject, qualification: route.params.qualification};
+    console.log(tempObj)
+>>>>>>> e1ce50ca6b97b109e6eb7d5d094a1f87eb6f863e
     return (
       <TouchableOpacity
         onPress={() => navigateTo(navigation, 'Practice', tempObj)}
@@ -59,9 +78,15 @@ const Home = ({navigation}) => {
 
   return (
     <View style={styles.body}>
+<<<<<<< HEAD
         <ScrollView>
           <View style={styles.cardContainer}>{subjectCards}</View>
         </ScrollView>
+=======
+      <ScrollView>
+        <View style={styles.cardContainer}>{subjectCards}</View>
+      </ScrollView>
+>>>>>>> e1ce50ca6b97b109e6eb7d5d094a1f87eb6f863e
     </View>
   );
 };
@@ -107,4 +132,8 @@ const styles = StyleSheet.create({
   },
 });
 
+<<<<<<< HEAD
 export default Home;
+=======
+export default Subject;
+>>>>>>> e1ce50ca6b97b109e6eb7d5d094a1f87eb6f863e

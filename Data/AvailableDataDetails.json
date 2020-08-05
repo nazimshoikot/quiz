@@ -1,0 +1,22 @@
+{
+    "qualifications" : [
+        {
+          "name": "Cambridge-IGCSE",
+          "id": "1"
+        },
+        {
+          "name": "Edexcel-IGCSE",
+          "id": "2"
+        }
+      ],
+    "subjects" : [
+        {
+          "name": "Accounting",
+          "id": "1"
+        },
+        {
+          "name": "Physics",
+          "id": "2"
+        }
+      ]
+}
