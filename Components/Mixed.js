@@ -1,18 +1,15 @@
+/* eslint-disable prettier/prettier */
 import React, {Component} from 'react';
 
-import {
-  SafeAreaView,
-  ScrollView,
-  View,
-  Text,
-  Button,
-  StyleSheet,
-} from 'react-native';
+import {SafeAreaView, ScrollView, View, Text, StyleSheet} from 'react-native';
 
-import {Card} from 'react-native-elements';
 
 import Question from './Question';
-import ResultQuestion from './ResultQuestion';
+import {ExecuteQuery} from './utils.js';
+
+import {Button} from 'react-native-elements';
+import MixedResult from './MixedResult';
+import LoadingSign from './LoadingSign.js';
 
 class Mixed extends Component {
   constructor() {
@@ -20,6 +17,9 @@ class Mixed extends Component {
     this.state = {
       showResults: false,
       quizQuestions: [],
+
+      // whether the page is loaded or not
+      isLoaded: false,
 
       // which feedback to show
       showOverallFeedback: false,
@@ -32,71 +32,92 @@ class Mixed extends Component {
   }
 
   componentDidMount() {
-    // get all the data
-    const data = require('./../Data/Accounting - Cambridge.json');
-    let allQues = [];
-    // console.log("Data length: ", data.length)
-    // put all the questions from the years into allQuestions
-    for (let i = 0; i < data.length; i++) {
-      for (let j = 0; j < data[i].Questions.length; j++) {
-        allQues.push(data[i].Questions[j]);
-      }
-    }
-    const allQuestions = allQues;
-    console.log('allquestions length: ', allQuestions.length);
-    for (let i = 0; i < allQuestions.length; i++) {
-      if (allQuestions[i].Guess !== '') {
-        console.log('ERRRRORRRR');
-        console.log(allQuestions[i]);
-      }
-    }
+    this.getRandomQuestions();
+  }
 
-    // extract 10 random questions from all questions
-    const numQuestions = 10;
-    let quizArr = [];
-    if (allQuestions.length !== 0) {
-      for (let i = 0; i < allQuestions.length; i++) {
-        let ind = Math.floor(Math.random() * allQuestions.length);
-        // push the question into the arr
-        // console.log("Item: ", allQuestions[ind])
-        let q = allQuestions[ind];
-        // create a new object
-        let newQuestion = {
-          Question: q.Question,
-          A: q.A,
-          B: q.B,
-          C: q.C,
-          D: q.D,
-          Answer: q.Answer,
-          Category: q.Category,
-          Guess: q.Guess,
-        };
-
-        // console.log('Are the arrays same? ', newArr === allQuestions);
-
-        if (!quizArr.includes(newQuestion)) {
-          // make the body of the first card visible
-          if (quizArr.length === 0) {
-            newQuestion.ShowBody = true;
+  alreadyCompleted = (completedArr, newQuestion) => {
+    
+    for (let i = 0; i < completedArr.length; i++) {
+      if (completedArr[i].D === newQuestion.D) {
+        if (completedArr[i].A === newQuestion.A) {
+          if (completedArr[i].B === newQuestion.B) {
+            if (completedArr[i].C === newQuestion.C) { 
+              if (completedArr[i].Question === newQuestion.Question) {
+                  // console.log("ALLLLREADYYYYY EXISTTTTTTTTTTTTTSSS")
+                  // console.log(completedArr[i])
+                  // console.log(newQuestion)
+                  return true;
+              }
+            }
           }
-          quizArr.push(newQuestion);
-        }
 
-        if (quizArr.length >= numQuestions) {
-          break;
         }
       }
     }
-    // console.log('quizArray:');
-    // for (let i = 0; i < quizArr.length; i++) {
-    //   console.log('Guess: ', quizArr[i].Guess);
-    // }
+    return false;
+  };
 
-    // eslint-disable-next-line react/no-did-mount-set-state
+  // get the questions needed for the quiz
+  getRandomQuestions = async () => {
+    console.log("GETTTING RANDOM QUESTIONS....");
+    let qualification = this.props.route.params.qualification.name;
+    let subject = this.props.route.params.sub.name;
+    let query = `SELECT * FROM Questions WHERE Qualification='${qualification}' 
+    AND Subject='${subject}' ORDER BY RANDOM()`;
+    let response = await ExecuteQuery(query, []);
+    let rows = response.rows;
+    console.log(response.rows);
+
+    // get all the quizzes that have been done
+    query = `SELECT quiz_questions FROM "CompletedQuestions" WHERE 
+    qualification='${qualification}' AND subject='${subject}'
+    AND quiz_type='Mixed'`;
+    response = await ExecuteQuery(query, []);
+    let completedRows = response.rows;
+    // create an array of questions already completed
+    let completedQuestions = [];
+    for (let i = 0; i < completedRows.length; i++) {
+      let quiz_questions = JSON.parse(completedRows.item(i).quiz_questions); // get the array
+      for (let j = 0; j < quiz_questions.length; j++) {
+        completedQuestions.push(quiz_questions[j]);
+      }
+    }
+    console.log("Length of completed: ", completedQuestions.length);
+
+    // create new objects for each question
+    let numQuestions = 20; // number of questions in quiz
+    let quizArr = [];
+    console.log("Length of all: ", rows.length);
+    // console.log("Comleted: ", completedQuestions);
+    for (let i = 0; i < rows.length; i++) {
+      let q = rows.item(i);
+      // create a new object
+      let newQuestion = {
+        Question: q.Question,
+        A: q.A,
+        B: q.B,
+        C: q.C,
+        D: q.D,
+        Answer: q.Answer,
+        Category: q.Category,
+        Guess: q.Guess,
+      };
+      // console.log("Question: ", newQuestion);
+      if (!quizArr.includes(newQuestion) &&
+            !this.alreadyCompleted(completedQuestions, newQuestion)) {
+        quizArr.push(newQuestion);
+      }
+
+      if (quizArr.length >= numQuestions) {
+        break;
+      }
+    }
+
     this.setState({
+      isLoaded: true,
       quizQuestions: quizArr,
     });
-  }
+  };
 
   navigateTo = (page, parameters) => {
     this.props.navigation.navigate(page, parameters);
@@ -108,10 +129,6 @@ class Mixed extends Component {
   }
 
   submitAnswers() {
-    // console.log('======================SUBMITTING==================');
-    // for (let i = 0; i < this.state.quizQuestions.length; i++) {
-    //   console.log(this.state.quizQuestions[i]);
-    // }
     this.setState({
       showResults: true,
     });
@@ -130,10 +147,8 @@ class Mixed extends Component {
       showOverallFeedback: false,
     });
   };
-
-  render() {
-    // const {subject} = this.props.route.params;
-
+  // prepares the quizzing platform
+  getQuizzingPlatform = () => {
     // Prepare the quizzing platform
     // create array of question components
     let questions = this.state.quizQuestions.map((question, i) => {
@@ -146,225 +161,82 @@ class Mixed extends Component {
         />
       );
     });
-    let quizPlatform = (
+    
+    // decide whether to show loading or submit
+    let submitButton = <LoadingSign />;
+    if (this.state.isLoaded) {
+      // show the submit button 
+      submitButton = (
+        <Button title="Submit" onPress={this.submitAnswers} />
+      );
+    }
+
+    // if no questions left to show
+    if (questions.length === 0) {
+      // dont show any submit buttton
+      submitButton = (
+        <View style={styles.oval}>
+          <Button title="Check Progress" />
+        </View>
+      );
+
+      // give him the message that all questions are done
+      questions.push(
+        <Text key={1}>
+          All mixed questions from this qualification completed. Go to progress
+          to see results or retry the quizzes. 
+        </Text>
+      );
+
+    }
+
+    return (
       <View>
         <ScrollView>
           <View>{questions}</View>
           <View>
-            <Button title="Submit" onPress={this.submitAnswers} />
+            {submitButton}
           </View>
         </ScrollView>
       </View>
     );
-
-    // prepare the results platform (to show results when submit is clicked)
+  };
+  // used for debugging. will delete later
+  showCheatsheet = () => {
     console.log('Cheatsheet: ');
     for (let i = 0; i < this.state.quizQuestions.length; i++) {
       console.log('Answer: ', this.state.quizQuestions[i].Answer);
       console.log('Guess: ', this.state.quizQuestions[i].Guess);
     }
+  };
+
+  // prepares the results platform for the page
+  getResultPlatform = () => {
+    let qualification = this.props.route.params.qualification.name;
+    let subject = this.props.route.params.sub.name;
     // find the number of correct, incorrect, and unattempted
-    let resultPlatform = [];
-    if (this.state.showResults) {
-      let correctCount = 0;
-      let errorCount = 0;
-      let unattemptedCount = 0;
-      // category array
-      let categoryArray = [];
-      // create the category array and counts needed for formulating results
-      for (let i = 0; i < this.state.quizQuestions.length; i++) {
-        let question = this.state.quizQuestions[i];
-        // checking if category already included
-        // let arrayAlreadyContains = false;
-        let categoryIndex = -1;
-        for (let j = 0; j < categoryArray.length; j++) {
-          if (categoryArray[j].Category === question.Category) {
-            categoryIndex = j;
-            break;
-          }
-        }
-        // if array does not already contain
-        if (categoryIndex === -1) {
-          // create a category object
-          let tmp = {
-            Category: question.Category,
-            correctCount: 0,
-            correctQuestions: [],
-            incorrectCount: 0,
-            incorrectQuestions: [],
-            unattemptedCount: 0,
-            unattemptedQuestions: [],
-            Questions: [],
-          };
-          // push the category object
-          categoryArray.push(tmp);
-          categoryIndex = categoryArray.length - 1; // index of newly pushed category
-        }
+    return (
+      <MixedResult
+        arr={this.state.quizQuestions}
+        isSaved={false}
+        qualification={qualification}
+        subject={subject}
+        type="Mixed"
+        year=""
+      />
+    );
+  };
 
-        if (categoryIndex >= 0) {
-          // if unattempted
-          if (typeof question.Guess === 'undefined' || question.Guess === '') {
-            unattemptedCount++;
-            // find the category and add the question results to that category
-            if (categoryArray[categoryIndex].Category === question.Category) {
-              categoryArray[categoryIndex].unattemptedCount++;
-              categoryArray[categoryIndex].Questions.push(question);
-            }
-          } else if (question.Answer === question.Guess) {
-            correctCount++;
-            // find the category and add the question results to that category
-            if (categoryArray[categoryIndex].Category === question.Category) {
-              categoryArray[categoryIndex].correctCount++;
-              categoryArray[categoryIndex].Questions.push(question);
-            }
-          } else {
-            // find the category and add the question results to that category
-            if (categoryArray[categoryIndex].Category === question.Category) {
-              categoryArray[categoryIndex].incorrectCount++;
-              categoryArray[categoryIndex].Questions.push(question);
-            }
-            errorCount++;
-          }
-        }
-      }
-      console.log('Category Array: ', categoryArray);
-
-      // Give a general result
-      let totalCount = correctCount + errorCount + unattemptedCount;
-      let correctPercentage = (correctCount / totalCount) * 100;
-      let correctPercentageStr = correctPercentage.toPrecision(4) + '%';
-
-      // decide if the student did excellent, good, bad, or failed.
-      let overallMessage = '';
-      if (correctPercentage >= 90) {
-        overallMessage = 'Excellent!';
-      } else if (correctPercentage >= 75) {
-        overallMessage = 'Good!';
-      } else if (correctPercentage >= 50) {
-        overallMessage = "Passed. Let's try one more.";
-      } else {
-        overallMessage = "Failed. Bruh you don't know shit.";
-      }
-
-      // let the students decide which type of feedback they want
-      let resultSelectionButton = (
-        <View style={styles.buttonsContainer}>
-          <View style={styles.buttonContainer}>
-            <Button
-              onPress={this.toggleShowCategoryFeedback}
-              title="Category feedback"
-            />
-          </View>
-          <View style={styles.buttonContainer}>
-            <Button
-              onPress={this.toggleShowOverallFeedback}
-              title="Overall feedback"
-            />
-          </View>
-        </View>
-      );
-
-      // ====================== OVERALL FEEDBACK =========================
-      let resultQuestions = [];
-      let categoryResults = [];
-      if (this.state.showOverallFeedback) {
-        // put the header
-        resultQuestions.push(
-          <View
-            style={styles.feedbackTitleContainer}
-            key={this.state.quizQuestions.length}
-          >
-            <Text style={styles.feedbackTitle}>Overall Feedback</Text>
-          </View>,
-        );
-        // put all the questions in the feedback
-        this.state.quizQuestions.map((question, i) => {
-          let tmp = (
-            <ResultQuestion
-              ques={question}
-              ind={i}
-              key={i}
-              recordAnswer={this.recordAnswer}
-            />
-          );
-          resultQuestions.push(tmp);
-        });
-      } else if (this.state.showCategoryFeedback) {
-        // ======================== CATEGORY FEEDBACK ==========================
-        // find the percecntage for the category
-        for (let j = 0; j < categoryArray.length; j++) {
-          // push the heading
-          if (categoryResults.length === 0) {
-            categoryResults.push(
-              <View
-                style={styles.feedbackTitleContainer}
-                key={categoryArray.length}
-              >
-                <Text style={styles.feedbackTitle}>Category Feedback</Text>
-              </View>,
-            );
-          }
-          // create the category accuracy percentage
-          let categoryTotalCount =
-            categoryArray[j].correctCount +
-            categoryArray[j].incorrectCount +
-            categoryArray[j].unattemptedCount;
-          let categoryCorrectPercentage =
-            (categoryArray[j].correctCount / categoryTotalCount) * 100;
-          let categoryCorrectPercentageStr =
-            categoryCorrectPercentage.toPrecision(4) + '%';
-          let msg =
-            categoryArray[j].Category +
-            '\n' +
-            categoryTotalCount +
-            ' Question(s), Score: ' +
-            categoryCorrectPercentageStr;
-          // put all the questions for the category
-          let categoryQuestions = categoryArray[j].Questions.map(
-            (question, i) => {
-              let tmp = <ResultQuestion ques={question} ind={i} key={i} />;
-              return tmp;
-            },
-          );
-          // combine msg and questions
-          let categoryComponent = (
-            <View key={j}>
-              <View style={styles.categoryTitleContainer}>
-                <Text style={styles.categoryTitle}>{msg}</Text>
-              </View>
-              {categoryQuestions}
-            </View>
-          );
-          // push for each category
-          categoryResults.push(categoryComponent);
-        }
-      }
-      // ============================= CREATE THE RESULTS PLATFORM ==================
-      resultPlatform = (
-        <View>
-          <ScrollView>
-            <Card title="Results">
-              <Text>{overallMessage}</Text>
-              <Text>You scored {correctPercentageStr} in the quiz!</Text>
-              <Text>
-                Correct: {correctCount}/{totalCount}{' '}
-              </Text>
-              <Text>
-                incorrect: {errorCount}/{totalCount}
-              </Text>
-              <Text>Unattempted: {unattemptedCount}</Text>
-              <View>{categoryResults}</View>
-              <View>{resultQuestions}</View>
-              <View>{resultSelectionButton}</View>
-            </Card>
-          </ScrollView>
-        </View>
-      );
-    }
+  render() {
+    // get the quizzing platform
+    let quizPlatform = this.getQuizzingPlatform();
+    // this.showCheatsheet();
 
     // decide which platform to show to the user
     let platform = quizPlatform;
     if (this.state.showResults) {
+      // prepare the results platform (to show results when submit is clicked)
+      let resultPlatform = this.getResultPlatform();
       platform = resultPlatform;
     }
     // return the platform
@@ -399,6 +271,14 @@ const styles = StyleSheet.create({
     marginBottom: 5,
     backgroundColor: '#2EC670',
   },
+  questionIcon: {
+    margin: 5,
+  },
+  oval: {
+    borderRadius: 50,
+    margin: 20,
+    backgroundColor: "red",
+  }
 });
 
 export default Mixed;
