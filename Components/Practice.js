@@ -9,6 +9,11 @@ const Practice = ({route, navigation}) => {
     navigation.navigate(page, parameters);
   };
 
+  let obj = {
+    qualification: route.params.qualification,
+    subject: route.params.sub.name,
+  };
+  console.log('Object being passed from practice: ', obj);
   return (
     <View>
       <ScrollView>
@@ -20,9 +25,7 @@ const Practice = ({route, navigation}) => {
                 <Button
                   style={styles.navButton}
                   title="Mixed"
-                  onPress={() =>
-                    navigateTo(navigation, 'MixedPractice', route.params)
-                  }
+                  onPress={() => navigateTo(navigation, 'MixedPractice', obj)}
                 />
               </View>
 
@@ -31,7 +34,7 @@ const Practice = ({route, navigation}) => {
                   style={styles.navButton}
                   title="Category"
                   onPress={() =>
-                    navigateTo(navigation, 'CategorySelection', route.params)
+                    navigateTo(navigation, 'CategorySelection', obj)
                   }
                 />
               </View>
@@ -40,16 +43,12 @@ const Practice = ({route, navigation}) => {
                 <Button
                   style={styles.navButton}
                   title="Yearwise"
-                  onPress={() =>
-                    navigateTo(navigation, 'YearSelection', route.params)
-                  }
+                  onPress={() => navigateTo(navigation, 'YearSelection', obj)}
                 />
               </View>
               <View style={styles.buttonContainer}>
                 <Button
-                  onPress={() =>
-                    navigateTo(navigation, 'Progress', route.params)
-                  }
+                  onPress={() => navigateTo(navigation, 'Progress', obj)}
                   title="Progress"
                 />
               </View>

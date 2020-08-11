@@ -41,8 +41,10 @@ const CategorySelection = ({route, navigation}) => {
   // gets all the categories for users to select
   const getAllCategories = async () => {
     // get the qualification and subject
-    let qualification = route.params.qualification.name;
-    let subject = route.params.sub.name;
+    let qualification = route.params.qualification;
+    let subject = route.params.subject;
+    console.log("Params in category selection: ", route.params);
+    console.log(`Category selection: Qualification: ${qualification}, Subject: ${subject}`);
     // query the database to get all Categories available for this qualification
     // and subject
     let query = `SELECT DISTINCT Category FROM Questions WHERE Qualification='${qualification}' 
@@ -144,8 +146,8 @@ const CategorySelection = ({route, navigation}) => {
 
   // create the object to send to Categorywise
   let obj = {
-    subject : route.params.sub.name,
-    qualification : route.params.qualification.name,
+    subject : route.params.subject,
+    qualification : route.params.qualification,
     category : selectedValue,
   };
 

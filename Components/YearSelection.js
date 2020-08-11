@@ -43,8 +43,8 @@ const YearSelection = ({route, navigation}) => {
 
   const getAllYears = async () => {
     // get the qualification and subject
-    let qualification = route.params.qualification.name;
-    let subject = route.params.sub.name;
+    let qualification = route.params.qualification;
+    let subject = route.params.subject;
     // query the database to get all years available for this qualification
     // and subject
     let query = `SELECT DISTINCT Year FROM Questions WHERE Qualification='${qualification}' 
@@ -143,8 +143,8 @@ const YearSelection = ({route, navigation}) => {
 
   // create the object to send to yearwise
   let obj = {
-    subject : route.params.sub.name,
-    qualification : route.params.qualification.name,
+    subject : route.params.subject,
+    qualification : route.params.qualification,
     year : selectedValue,
   };
 

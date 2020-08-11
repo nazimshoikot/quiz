@@ -39,13 +39,13 @@ const Subject = ({route, navigation}) => {
   const subjects = dataDetails.subjects;
 
   // make a card for each subject
-  let subjectCards = subjects.map((subject) => {
+  let subjectCards = subjects.map((subject, i) => {
     let tempObj = {sub: subject, qualification: route.params.qualification};
-    console.log(tempObj)
+    console.log("Object being passed from subject: ", tempObj);
     return (
       <TouchableOpacity
         onPress={() => navigateTo(navigation, 'Practice', tempObj)}
-        key={subject.id}
+        key={i}
       >
         <Card style={styles.welcomeTextContainer} title={subject.name} />
       </TouchableOpacity>

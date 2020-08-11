@@ -9,19 +9,20 @@ import Practice from './Components/Practice.js';
 import Mixed from './Components/Mixed.js';
 import Qualification from './Components/Qualification.js';
 import {ExecuteQuery, loadJSONFiles} from './Components/utils.js';
-import Progress from './Components/Progress.js'
+import Progress from './Components/Progress.js';
 import MixedResultPage from './Components/MixedResultPage.js';
 import YearSelection from './Components/YearSelection.js';
 import YearWise from './Components/YearWise.js';
 import CategoryQuiz from './Components/CategoryQuiz.js';
 import CategorySelection from './Components/CategorySelection.js';
+import Home from './Components/Home.js';
 
 const Stack = createStackNavigator();
 
 // create database
 async function populateDatabase() {
-  // delete the table if it exists
-  // let qu = 'DROP TABLE IF EXISTS Questions';
+  // // delete the table if it exists
+  // let qu = 'DROP TABLE IF EXISTS UserInfo';
   // let r = await ExecuteQuery(qu, []);
 
   // check if the table exists
@@ -33,9 +34,23 @@ async function populateDatabase() {
   if (response.rows.item(0) === undefined) {
     console.log('Creating and populating table');
 
+    // create completed questions table
+    query = `CREATE TABLE IF NOT EXISTS "CompletedQuestions" (
+        "quiz_id" INTEGER NOT NULL,
+        "quiz_questions" LONGTEXT NOT NULL,
+        "quiz_type" TEXT NOT NULL,
+        "qualification" TEXT NOT NULL,
+        "subject" TEXT NOT NULL,
+        "year" TEXT NOT NULL,
+        "category" TEXT NOT NULL,
+        PRIMARY KEY("quiz_id")
+    )`;
+    response = await ExecuteQuery(query, []);
+    console.log('Created completed questions table: ', response.rows);
+
     // load all the required data from the json files
     let jsonQuestions = loadJSONFiles();
-    console.log("length of all: ", jsonQuestions.length);
+    console.log('length of all: ', jsonQuestions.length);
 
     // create the table
     query = `CREATE TABLE "Questions" (
@@ -66,18 +81,18 @@ async function populateDatabase() {
       query += questionQuery;
 
       if (i !== jsonQuestions.length - 1) {
-        query += ",";
+        query += ',';
       }
     });
     try {
       response = await ExecuteQuery(query, []);
     } catch (err) {
-      console.log("Caught the error.\n", err)
+      console.log('Caught the error.\n', err);
     }
 
     query = 'SELECT * FROM Questions';
     response = await ExecuteQuery(query, []);
-    console.log("Response: ", response.rows);
+    console.log('Response: ', response.rows);
   } else {
     // table is already there
     console.log('NOT POPULATINGGG');
@@ -90,7 +105,7 @@ async function populateDatabase() {
     //     break;
     //   }
     // }
-    console.log("Number of questions: ", response.rows.length);
+    console.log('Number of questions: ', response.rows.length);
   }
 }
 
@@ -113,6 +128,7 @@ const App = () => {
             },
           }}
         >
+          <Stack.Screen name="Home" component={Home} />
           <Stack.Screen name="Qualification" component={Qualification} />
           <Stack.Screen name="Subject" component={Subject} />
           <Stack.Screen name="Practice" component={Practice} />

@@ -60,8 +60,8 @@ class Mixed extends Component {
   // get the questions needed for the quiz
   getRandomQuestions = async () => {
     console.log("GETTTING RANDOM QUESTIONS....");
-    let qualification = this.props.route.params.qualification.name;
-    let subject = this.props.route.params.sub.name;
+    let qualification = this.props.route.params.qualification;
+    let subject = this.props.route.params.subject;
     let query = `SELECT * FROM Questions WHERE Qualification='${qualification}' 
     AND Subject='${subject}' ORDER BY RANDOM()`;
     let response = await ExecuteQuery(query, []);
@@ -212,8 +212,8 @@ class Mixed extends Component {
 
   // prepares the results platform for the page
   getResultPlatform = () => {
-    let qualification = this.props.route.params.qualification.name;
-    let subject = this.props.route.params.sub.name;
+    let qualification = this.props.route.params.qualification;
+    let subject = this.props.route.params.subject;
     // find the number of correct, incorrect, and unattempted
     return (
       <MixedResult

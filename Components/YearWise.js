@@ -15,7 +15,7 @@ const YearWise = ({route, navigation}) => {
   // states
     const [questions, setQuestions] = useState([]);
     const [canSubmit, setCanSubmit] = useState(false);
-    const [showResult, setShowResult] = useState(false)
+    const [showResult, setShowResult] = useState(false);
 
   // get data from database
   useEffect(() => {

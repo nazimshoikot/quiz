@@ -23,8 +23,8 @@ const QuizResult = (props) => {
 
 const Progress = ({route, navigation}) => {
   // get values from props
-  let subject = route.params.sub.name;
-  let qualification = route.params.qualification.name;
+  let subject = route.params.subject;
+  let qualification = route.params.qualification;
   // define state
   const [pageComponent, setPageComponent] = useState(null);
   useEffect(() => {
