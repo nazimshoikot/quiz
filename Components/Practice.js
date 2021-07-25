@@ -8,7 +8,7 @@ const Practice = ({route, navigation}) => {
   const navigateTo = (navigation, page, parameters) => {
     navigation.navigate(page, parameters);
   };
-
+  // console.log("Params:", route.params);
   return (
     <View>
       <ScrollView>

@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import React, {Component} from 'react';
 
-import {SafeAreaView, ScrollView, View, Text, StyleSheet} from 'react-native';
+import {ScrollView, View, Text, StyleSheet} from 'react-native';
 
 
 import Question from './Question';
@@ -64,9 +64,10 @@ class Mixed extends Component {
     let subject = this.props.route.params.sub.name;
     let query = `SELECT * FROM Questions WHERE Qualification='${qualification}' 
     AND Subject='${subject}' ORDER BY RANDOM()`;
+    // let query = `SELECT * FROM Questions`;
+
     let response = await ExecuteQuery(query, []);
     let rows = response.rows;
-    console.log(response.rows);
 
     // get all the quizzes that have been done
     query = `SELECT quiz_questions FROM "CompletedQuestions" WHERE 
@@ -172,7 +173,7 @@ class Mixed extends Component {
     }
 
     // if no questions left to show
-    if (questions.length === 0) {
+    if (questions.length === 0 && this.state.isLoaded) {
       // dont show any submit buttton
       submitButton = (
         <View style={styles.oval}>

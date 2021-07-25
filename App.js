@@ -37,7 +37,7 @@ async function populateDatabase() {
     let jsonQuestions = loadJSONFiles();
     console.log("length of all: ", jsonQuestions.length);
 
-    // create the table
+    // create the questions table
     query = `CREATE TABLE "Questions" (
       "question_id"	INTEGER NOT NULL,
       "Question"	TEXT NOT NULL,
@@ -54,6 +54,21 @@ async function populateDatabase() {
       PRIMARY KEY("question_id")
     )`;
     await ExecuteQuery(query, []);
+    
+    // create the table if it does not exist
+    let query = `CREATE TABLE IF NOT EXISTS "CompletedQuestions" (
+      "quiz_id" INTEGER NOT NULL,
+      "quiz_questions" LONGTEXT NOT NULL,
+      "quiz_type" TEXT NOT NULL,
+      "qualification" TEXT NOT NULL,
+      "subject" TEXT NOT NULL,
+      "year" TEXT NOT NULL,
+      "category" TEXT NOT NULL,
+      PRIMARY KEY("quiz_id")
+    )`;
+    let response = await ExecuteQuery(query, []);
+    let rows = response.rows;
+    console.log(rows)
 
     // insert all the data from imported json documents into the table
     query = `INSERT INTO Questions (Question, A, B, C, D, Answer, 
@@ -77,7 +92,6 @@ async function populateDatabase() {
 
     query = 'SELECT * FROM Questions';
     response = await ExecuteQuery(query, []);
-    console.log("Response: ", response.rows);
   } else {
     // table is already there
     console.log('NOT POPULATINGGG');
